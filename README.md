@@ -16,7 +16,7 @@ I collected this knowledge by being an admin for 6 months and I wanted to make t
 ### How to spawn more cars
 In order to spawn more cars :
 1. Open the ___event.xml___ file.
-2. Find the event of the car you want to spawn more (VehicleCivilianSedan, VehicleHatchback02, VehicleOffroadHatchback, VehicleSedan02), 
+2. Find the event of the car you want to spawn more (VehicleCivilianSedan, VehicleHatchback02, VehicleOffroadHatchback, VehicleSedan02).
 ```xml
 <event name="VehicleOffroadHatchback">
         <nominal>4</nominal>
@@ -64,6 +64,7 @@ In order to spawn more cars :
         </children>
     </event>
 ```
+4. Restart the server.
 
 ### How to despawn all cars and make then respawn brand new
 In order to make all car, working and broken ones, despawn and respawn brand new :
