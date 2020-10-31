@@ -11,7 +11,7 @@
 
 ### How to 
 
-:::xml
-```
+
+```xml
 <vehicles init="1" load="1" respawn="1" save="1"/>
 ```
