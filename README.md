@@ -19,5 +19,5 @@ In order to make car non persistant, by that I mean despawn and respawn after ev
 5- Change the ___save___ parameter to ___0___
 
 ```xml
-<vehicles init="1" load="1" respawn="1" save="___0___"/>
+<vehicles init="1" load="1" respawn="1" save="0"/>
 ```
