@@ -18,6 +18,8 @@ In order to make all car, working and broken ones, despawn and respawn brand new
 
 1. Open the ___event.xml___ file.
 2. For each car event you want to despawn (VehicleCivilianSedan, VehicleHatchback02, VehicleOffroadHatchback, VehicleSedan02), change the ___active___ entry to ___0___.
+3. Restart your server. 
+> This will make all car despawn.
 
 ### How to make car non persistant
 In order to make car non persistant, by that I mean despawn and respawn after every server restart : 
