@@ -13,20 +13,116 @@ I collected this knowledge by being an admin for 6 months and I wanted to make t
 
 ## Car Related
 
+### How to spawn more cars
+In order to spawn more cars :
+1. Open the ___event.xml___ file.
+2. Find the event of the car you want to spawn more (VehicleCivilianSedan, VehicleHatchback02, VehicleOffroadHatchback, VehicleSedan02), 
+```xml
+<event name="VehicleOffroadHatchback">
+        <nominal>4</nominal>
+        <min>1</min>
+        <max>8</max>
+        <lifetime>300</lifetime>
+        <restock>0</restock>
+        <saferadius>500</saferadius>
+        <distanceradius>500</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback"/>
+            <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback_Blue"/>
+            <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback_White"/>
+        </children>
+    </event>
+```
+3. Change the ___min___, ___max___ and ___nominal___ tags to the values you want.
+- ___min___ is the minimum number of this type of car you want on the map.
+- ___max___ is the maximum number of this type of car you want on the map.
+- ___nominal___ is the average number of this type of car you want on the map.
+
+```xml
+<event name="VehicleOffroadHatchback">
+        <nominal>20</nominal>
+        <min>10</min>
+        <max>30</max>
+        <lifetime>300</lifetime>
+        <restock>0</restock>
+        <saferadius>500</saferadius>
+        <distanceradius>500</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback"/>
+            <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback_Blue"/>
+            <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback_White"/>
+        </children>
+    </event>
+```
+
 ### How to despawn all cars and make then respawn brand new
 In order to make all car, working and broken ones, despawn and respawn brand new :
 
 1. Open the ___event.xml___ file.
-2. For each car event you want to despawn (VehicleCivilianSedan, VehicleHatchback02, VehicleOffroadHatchback, VehicleSedan02), change the ___active___ entry to ___0___.
+2. For each car event you want to despawn (VehicleCivilianSedan, VehicleHatchback02, VehicleOffroadHatchback, VehicleSedan02), change the ___active___ tag to ___0___.
+```xml
+<event name="VehicleOffroadHatchback">
+        <nominal>40</nominal>
+        <min>20</min>
+        <max>70</max>
+        <lifetime>300</lifetime>
+        <restock>0</restock>
+        <saferadius>500</saferadius>
+        <distanceradius>500</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>0</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback"/>
+            <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback_Blue"/>
+            <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback_White"/>
+        </children>
+    </event>
+```
 3. Restart your server. 
 > This will make all car despawn.
+4. For each car event you changed in the ___event.xml___ file, change back the ___active___ tag to ___1__.
+```xml
+<event name="VehicleOffroadHatchback">
+        <nominal>40</nominal>
+        <min>20</min>
+        <max>70</max>
+        <lifetime>300</lifetime>
+        <restock>0</restock>
+        <saferadius>500</saferadius>
+        <distanceradius>500</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback"/>
+            <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback_Blue"/>
+            <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback_White"/>
+        </children>
+    </event>
+```
+5. Restart your server. 
+> All cars should know respawn as brand new one.
 
 ### How to make car non persistant
 In order to make car non persistant, by that I mean despawn and respawn after every server restart : 
 
 1. Despawn all cars.
-2. Restart your server and stop it. 
-> This will make sure your cars will spawn brand new. 
+> This is to make sure your cars will spawn as brand new one. 
 > Not doing this will make car spawn in their last known state. 
 3. Open the ___economy.xml___ file.
 4. Find the ___vehicules___ tag.
