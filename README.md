@@ -6,12 +6,13 @@ I collected this knowledge by being an admin for 6 months and I wanted to make t
 
 ## Table of content
 - [General Configurations](#global-configurations)
+- [Territory flags configurations](#territory-flags-configurations)
 - [Car related configurations](#car-related-configurations)
 
 
 ## Global configurations
 
-### Change the despawn timer of things in the world
+### Change the despawn timers of things in the world
 ruined items, dead players, animals and dead zombies despawn timer can be changed. 
 1. Open the ___Globals.xml___ file.
 2. Find the appropriate tag you want to change :
@@ -27,7 +28,7 @@ ruined items, dead players, animals and dead zombies despawn timer can be change
 > Values are in seconds. Here ___3600___ means it is a ___60 seconds per minute X 60 minutes___ = ___1 hour___
 4. Save the file and restart the server.
 
-### Change the numbre on items found on the map
+### Change the maximum number of items found on the map
 Dayz limits the number of items you can find on the map to ___1200___. You can change this value, but be warn it can affect the server performance.
 1. Open the ___Globals.xml___ file.
 2. Find the ___SpawnInitial___ tag :
@@ -37,7 +38,7 @@ Dayz limits the number of items you can find on the map to ___1200___. You can c
 3. Change the ___value___ attribute of the number of items you want to spawn on the map.
 4. Save the file and restart the server.
 
-### Change the number of zombies on the map
+### Change the maximum number of zombies on the map
 
 Dayz limits the number of zombies players can encounters on the map to ___800___. You can change this value, but be warn it can affect the server performance.
 1. Open the ___Globals.xml___ file.
@@ -46,6 +47,44 @@ Dayz limits the number of zombies players can encounters on the map to ___800___
 <var name="ZombieMaxCount" type="0" value="800"/>
 ```
 3. Change the ___value___ attribute of the number of zombies you want on the map.
+4. Save the file and restart the server.
+
+### Change the maximum number of animals on the map
+
+Dayz limits the number of animals players can encounters on the map to ___200___. You can change this value, but be warn it can affect the server performance.
+1. Open the ___Globals.xml___ file.
+2. Find the ___AnimalMaxCount___ tag :
+```xml
+ <var name="AnimalMaxCount" type="0" value="200"/>
+```
+3. Change the ___value___ attribute of the number of animals you want on the map.
+4. Save the file and restart the server.
+
+
+
+## Territory flags configurations
+Territory flags (flag poles) in Dayz have the hability to refresh to despawn timers on item around them. You can change the behaviors of territory flags with the following configurations.
+
+### Change the refresh frenquency of territory flags
+Territory flag normally take 5 days to get down when it is fully raised. In order to change this behavior :
+1. Open the ___Globals.xml___ file.
+2. Find the ___FlagRefreshFrequency___ tag :
+```xml
+<var name="FlagRefreshFrequency" type="0" value="432000"/>
+```
+3. Change the ___value___ attribute to the value you want 
+> Values are in seconds. Here ___432000___ means ___60 seconds x 60 minutes x 24 hours =  5 days___
+4. Save the file and restart the server.
+
+### Change the refresh maximum duration of territory flags
+Territory flag normally when they are not fully down, refreshes the despawn timer of all items (items on the floor, fences, containers items, etc.) 60 meters around them. In order to change this behavior :
+1. Open the ___Globals.xml___ file.
+2. Find the ___FlagRefreshMaxDuration___ tag :
+```xml
+<var name="FlagRefreshMaxDuration" type="0" value="1296000"/>
+```
+3. Change the ___value___ attribute to the value you want 
+> Values are in seconds. Here ___1296000___ means ___60 seconds x 60 minutes x 24 hours =  15 days___
 4. Save the file and restart the server.
 
 ## Car related configurations
@@ -61,7 +100,8 @@ Others like the VS3 truck and the bus are non functionnal.
 ### How to spawn more cars
 In order to spawn more cars :
 1. Open the ___event.xml___ file.
-2. Find the event of the car you want to spawn more (VehicleCivilianSedan, VehicleHatchback02, VehicleOffroadHatchback, VehicleSedan02).
+2. Find the event of the car you want to spawn more.
+> Vehicule events name always begins with ___Vehicule___
 ```xml
 <event name="VehicleOffroadHatchback">
         <nominal>4</nominal>
