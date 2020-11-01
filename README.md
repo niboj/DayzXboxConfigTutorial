@@ -93,20 +93,28 @@ An item is define like this, for example the ___canteen___ item :
     	</type>
 ```
 
-- The ___nominal___ tag is the ___average___ number of this kind of items you will find in the world. In this case ___30___.
-- The ___lifetime___ tag is the time in seconds the item will stay on the map ___if untouched___ before it despawns. In this case ___60 seconds X 60 minutes = 1 hour___.
-- The ___min___ tag is the minimum number of this type of item you will find on the map. In this case ___15___.
-- The ___quantmin___ and ___quantmax___ tags is for items that contains quantities of somethings (pills, liquid, ammo, etc.). It is the random ___minimal and maximal percentage (%)___ this item will be filled with. In this case it will be filled between ___50% and 100%___.
-- The ___cost___ tag is the priority this item will be spawn over to others. In this case ___100___.
-- The ___flags___ tag tells how the game engine counts or spawn the items on the maps. ___1___ = true, ___0___ = false.
+- The ___nominal___ tag is the ___average___ number of this kind of items you will find in the world. 
+> In this case ___30___.
+- The ___lifetime___ tag is the time in seconds the item will stay on the map ___if untouched___ before it despawns.
+> In this case ___60 seconds X 60 minutes = 1 hour___.
+- The ___min___ tag is the minimum number of this type of item you will find on the map. 
+> In this case ___15___.
+- The ___quantmin___ and ___quantmax___ tags is for items that contains quantities of somethings (pills, liquid, ammo, etc.). It is the random ___minimal and maximal percentage (%)___ this item will be filled with.
+> In this case it will be filled between ___50% and 100%___.
+- The ___cost___ tag is the priority this item will be spawn over to others. 
+> In this case ___100___.
+- The ___flags___ tag tells how the game engine counts or spawn the items on the maps. 
+> ___1___ = true, ___0___ = false.
 	- ___count_in_cargo___ for items stored in container items (cars, tents, etc.).
 	- ___count_in_hoarder___ for items stored in containers your wear.
 	- ___count_in_map___ for items spawned in buildings and area all around the map.
 	- ___count_in_player___ for items your wear.
 	- ___deloot___ tells this item will only spawn on events (like helicrashes).
 	- ___crafted___ I have no idea.
-- The ___category___ tag is used to categorize items and is used in the ___mapgrouppos.xml___ file to spawn certain types of items in buildings. In this case ___food___.
-- The ___usage___ tag is used to tell in which type of area this item can spawn. In this case ___Military, Hunting, Town and Village___.
+- The ___category___ tag is used to categorize items and is used in the ___mapgrouppos.xml___ file to spawn certain types of items in buildings.
+> In this case ___food___.
+- The ___usage___ tag is used to tell in which type of area this item can spawn. 
+> In this case ___Military, Hunting, Town and Village___.
 
 ### How to cahnge how many items spawns
 Change the ___nominal___ value.
