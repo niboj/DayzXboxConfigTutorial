@@ -6,6 +6,7 @@ I collected this knowledge by being an admin for 6 months and I wanted to make t
 
 ## Table of content
 - [General configurations](#global-configurations)
+- [Messages configurations](#Messages-configurations)
 - [Territory flags configurations](#territory-flags-configurations)
 - [Car related configurations](#car-related-configurations)
 
@@ -59,6 +60,14 @@ Dayz limits the number of animals players can encounters on the map to ___200___
 ```
 3. Change the ___value___ attribute of the number of animals you want on the map.
 4. Save the file and restart the server.
+
+
+## Messages configurations
+Dayz allow you to display a message (in red) at the bottom the screen of players. In order to customize those messages you have to modify the ___message.xml___ file. 
+
+See this link on how to configure the messages you want to display : 
+[DayZ:Server Messages](https://community.bistudio.com/wiki/DayZ:Server_Messages)
+
 
 
 
