@@ -11,7 +11,7 @@ I collected this knowledge by being an admin for 6 months and I wanted to make t
 
 ## Global configurations
 
-### Cleanup Lifetime
+### Change the despawn timer of things in the world
 ruined items, dead players, animals and dead zombies despawn timer can be changed. 
 1. Open the ___Globals.xml___ file.
 2. Find the appropriate tag you want to change :
@@ -27,6 +27,15 @@ ruined items, dead players, animals and dead zombies despawn timer can be change
 > Values are in seconds. Here ___3600___ means it is a ___60 seconds per minute X 60 minutes___ = ___1 hour___
 4. Save the file and restart the server.
 
+### Change the numbre on items found on the map
+Dayz limits the number of items you can find on the map to ___1200___. You can change this value, but be warn it can affect the server performance.
+1. Open the ___Globals.xml___ file.
+2. Find the ___SpawnInitial___ tag :
+```xml
+<var name="SpawnInitial" type="0" value="1200"/>
+```
+3. Change the ___value___ attribute of the number of items you want to spawn on the map.
+4. Save the file and restart the server.
 
 ## Car related configurations
 
