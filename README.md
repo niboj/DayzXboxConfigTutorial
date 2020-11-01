@@ -14,11 +14,11 @@ I collected this knowledge by being an admin for 6 months and I wanted to make t
 ## Concepts
 
 ### Tiers
-The dayz map is divided in 4 tiers. Tiers are used to define area where certain items can spawn.
-- Tier 1 : pale green
-- Tier 2 : dark green
-- Tier 3 : flashy green
-- Tier 4 : red
+The dayz map is divided in 4 tiers. Tiers are used to define area where certain items can spawn. It's not clear which tier are what part of the map...
+- Tier 1 (probably light green)
+- Tier 2 (probably dark green)
+- Tier 3 (probably blue)
+- Tier 4  (probably red)
 
 ![Tiers](./tiers.jpg)
 
