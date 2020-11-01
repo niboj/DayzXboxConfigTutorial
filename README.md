@@ -152,7 +152,7 @@ In order to make car non persistant, by that I mean despawn and respawn after ev
 Cars in dayz spawn with random ___attachments___, in order to make then always fully built :
 
 1. Open the file ___cfgspawnabletypes.xml___.
-2. Fing the entry for the car type you want fully built, for example : 
+2. Find the entry for the car type you want fully built, for example : 
 ```xml
 <type name="OffroadHatchback">
 ```
@@ -202,5 +202,44 @@ Cars in dayz spawn with random ___attachments___, in order to make then always f
 			<item name="HatchbackTrunk" chance="1.00" />
 		</attachments>
         </type>
+```
+4. Save the file and restart your server.
+
+### How to add items in cars
+Cars can spawn with cargo in them, for example you may want to provide canteen of water and fuel to your players so they can fill their brand new car.
+1. Open the file ___cfgspawnabletypes.xml___.
+2. Find the entry for the car type you want to add items, for example : 
+```xml
+<type name="OffroadHatchback">
+```
+3. Add an attachement tag for each item you want to add in the cars. Remember a car can hold a maximum of 300 slots. For example: 
+```xml
+	<type name="OffroadHatchback">
+	... (car parts attachments) 
+	<attachments chance="1.00">
+			<item name="Canteen" chance="1.00" />
+		</attachments>
+		<attachments chance="1.00">
+			<item name="Canteen" chance="1.00" />
+		</attachments>
+		<attachments chance="1.00">
+			<item name="Canteen" chance="1.00" />
+		</attachments>
+		<attachments chance="1.00">
+			<item name="Canteen" chance="1.00" />
+		</attachments>
+		<attachments chance="1.00">
+			<item name="CanisterGasoline" chance="1.00" />
+		</attachments>
+		<attachments chance="1.00">
+			<item name="EpoxyPutty" chance="1.00" />
+		</attachments>
+		<attachments chance="1.00">
+			<item name="EpoxyPutty" chance="1.00" />
+		</attachments>
+		<attachments chance="1.00">
+			<item name="TacticalBaconCan" chance="1.00" />
+		</attachments>
+	</type>
 ```
 4. Save the file and restart your server.
