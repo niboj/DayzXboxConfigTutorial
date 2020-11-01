@@ -37,6 +37,17 @@ Dayz limits the number of items you can find on the map to ___1200___. You can c
 3. Change the ___value___ attribute of the number of items you want to spawn on the map.
 4. Save the file and restart the server.
 
+### Change the number of zombies on the map
+
+Dayz limits the number of zombies players can encounters on the map to ___800___. You can change this value, but be warn it can affect the server performance.
+1. Open the ___Globals.xml___ file.
+2. Find the ___ZombieMaxCount___ tag :
+```xml
+<var name="ZombieMaxCount" type="0" value="800"/>
+```
+3. Change the ___value___ attribute of the number of zombies you want on the map.
+4. Save the file and restart the server.
+
 ## Car related configurations
 
 ### Car types
@@ -275,4 +286,4 @@ Yes Dayz can have flying cars !!!
 1. Make your server 70 slots.
 2. Become very popular so that your server has more than 60 players.
 3. Drive a car. 
-> Dayz server become very laggy when there are more thant 60 players playing, this makes car undrivable and sometimes makes them go off in the air. 
+> Dayz servers become very laggy when there are more thant 60 players playing, this makes car undrivable and sometimes makes them go off in the air. 
