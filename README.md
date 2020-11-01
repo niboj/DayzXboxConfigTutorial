@@ -245,8 +245,9 @@ Cars can spawn with cargo in them, for example you may want to provide canteen o
 4. Save the file and restart your server.
 
 ### How to make your car fly
+Yes Dayz can have flying cars !!!
 
 1. Make your server 70 slots.
 2. Become very popular so that your server has more than 60 players.
 3. Drive a car. 
-> Dayz server become very laggy when there are more thant 60 players playing, this makes car undrivable and sometimes make them go off in the air. 
+> Dayz server become very laggy when there are more thant 60 players playing, this makes car undrivable and sometimes makes them go off in the air. 
