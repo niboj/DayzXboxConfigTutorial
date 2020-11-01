@@ -5,14 +5,30 @@ This is a tutorial to customize a Dayz Server for Xbox.
 I collected this knowledge by being an admin for 6 months and I wanted to make this knowledge public to others, so they can easily know how to customize their servers.
 
 ## Table of content
-- [General Configurations](#General-Configurations)
-- [Car Related configurations](#car-related-configurations)
+- [General Configurations](#global-configurations)
+- [Car related configurations](#car-related-configurations)
 
 
-## General Configurations
+## Global configurations
+
+### Cleanup Lifetime
+ruined items, dead players, animals and dead zombies despawn timer can be changed. 
+1. Open the ___Globals.xml___ file.
+2. Find the appropriate tag you want to change :
+```xml
+    <var name="CleanupLifetimeDeadAnimal" type="0" value="1200"/>
+    <var name="CleanupLifetimeDeadInfected" type="0" value="330"/>
+    <var name="CleanupLifetimeDeadPlayer" type="0" value="3600"/>
+    <var name="CleanupLifetimeDefault" type="0" value="45"/>
+    <var name="CleanupLifetimeLimit" type="0" value="3600"/>
+    <var name="CleanupLifetimeRuined" type="0" value="330"/>
+```
+3. Change the ___value___ attribute of the item you want 
+> Values are in seconds. Here ___3600___ means it is a ___60x60___ = 1 hour
+4. Save the file and restart the server.
 
 
-## Car Related configurations
+## Car related configurations
 
 ### Car types
 Dayz for xbox has only 4 car types : 
