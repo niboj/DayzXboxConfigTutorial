@@ -110,7 +110,7 @@ An item is define like this, for example the ___canteen___ item :
 	- The ___count_in_player___ attribute for items your wear.
 	- The ___deloot___ attribute tells this item will only spawn on events (like helicrashes).
 	- The ___crafted___ attribute I have no idea.
-> ___1 = true___ and __0 = false___
+> ___1 = true___ and ___0 = false___
 - The ___category___ tag is used to categorize items and is used in the ___mapgrouppos.xml___ file to spawn certain types of items in buildings.
 > In this case ___food___.
 - The ___usage___ tag is used to tell in which type of area this item can spawn. 
