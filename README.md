@@ -7,6 +7,7 @@ I collected this knowledge by being an admin for 6 months and I wanted to make t
 If this tutorial is helpul to you and you want me to contribute to my effort in documenting how this game works, I wont mind a small donation through paypal : 
 
 ![Donate](./Code QR.png)
+
 [Paypal Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=3EX6J5S29U5P4&currency_code=CAD)
 
 ## Table of content
