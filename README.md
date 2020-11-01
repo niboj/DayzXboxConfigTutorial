@@ -24,7 +24,7 @@ ruined items, dead players, animals and dead zombies despawn timer can be change
     <var name="CleanupLifetimeRuined" type="0" value="330"/>
 ```
 3. Change the ___value___ attribute of the item you want 
-> Values are in seconds. Here ___3600___ means it is a ___60x60___ = 1 hour
+> Values are in seconds. Here ___3600___ means it is a ___60 seconds X 60 minutes___ = ___1 hour___
 4. Save the file and restart the server.
 
 
