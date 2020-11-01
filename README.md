@@ -11,7 +11,7 @@ I collected this knowledge by being an admin for 6 months and I wanted to make t
 ## General Config
 
 
-[Cars] ## Car Related configurations
+[Cars]## Car Related configurations
 
 ### Car types
 Dayz for xbox has only 4 car types : 
