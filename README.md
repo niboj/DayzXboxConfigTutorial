@@ -13,6 +13,14 @@ I collected this knowledge by being an admin for 6 months and I wanted to make t
 
 ## Car Related
 
+### Car types
+Dayz for xbox has only 4 car types : 
+- VehicleCivilianSedan
+- VehicleHatchback02 
+- VehicleOffroadHatchback
+- VehicleSedan02
+Others like the VS3 truck and the bus are non functionnal.
+
 ### How to spawn more cars
 In order to spawn more cars :
 1. Open the ___event.xml___ file.
@@ -64,13 +72,18 @@ In order to spawn more cars :
         </children>
     </event>
 ```
-4. Restart the server.
+4. Save the file and restart the server.
 
 ### How to despawn all cars and make then respawn brand new
 In order to make all car, working and broken ones, despawn and respawn brand new :
 
 1. Open the ___event.xml___ file.
-2. For each car event you want to despawn (VehicleCivilianSedan, VehicleHatchback02, VehicleOffroadHatchback, VehicleSedan02), change the ___active___ tag to ___0___.
+2. For each car type you want to despawn find the corresponding event, for example : 
+```xml
+<event name="VehicleOffroadHatchback">
+```
+
+3.change the ___active___ tag to ___0___.
 ```xml
 <event name="VehicleOffroadHatchback">
         <nominal>40</nominal>
@@ -92,9 +105,9 @@ In order to make all car, working and broken ones, despawn and respawn brand new
         </children>
     </event>
 ```
-3. Restart your server. 
+4. Save the file and restart your server. 
 > This will make all car despawn.
-4. For each car event you changed in the ___event.xml___ file, change back the ___active___ tag to ___1__.
+5. For each car event you changed in the ___event.xml___ file, change back the ___active___ tag to ___1___.
 ```xml
 <event name="VehicleOffroadHatchback">
         <nominal>40</nominal>
@@ -116,7 +129,7 @@ In order to make all car, working and broken ones, despawn and respawn brand new
         </children>
     </event>
 ```
-5. Restart your server. 
+6. Save the file and restart your server. 
 > All cars should know respawn as brand new one.
 
 ### How to make car non persistant
@@ -132,4 +145,61 @@ In order to make car non persistant, by that I mean despawn and respawn after ev
 ```xml
 <vehicles init="1" load="1" respawn="1" save="0"/>
 ```
-6. Restart your server.
+6. Save the file and restart your server.
+
+### How to spawn fully built cars
+Cars in dayz spawn with random ___attachments___, in order to make then always fully built :
+
+1. Open the file ___cfgspawnabletypes.xml___.
+2. Fing the entry for the car type you want fully built, for example : 
+```xml
+<type name="OffroadHatchback">
+```
+3.For each ___attachments___ tag, change the ___chance___ attribute value to ___1.00___ and also for the following ___item___ tag change the chance attribute value to ___1.00___
+```xml
+<type name="OffroadHatchback">
+		<attachments chance="1.00">
+			<item name="HatchbackWheel" chance="1.00" />
+		</attachments>
+		<attachments chance="1.00">
+			<item name="HatchbackWheel" chance="1.00" />
+		</attachments>
+		<attachments chance="1.00">
+			<item name="HatchbackWheel" chance="1.00" />
+		</attachments>
+		<attachments chance="1.00">
+			<item name="HatchbackWheel" chance="1.00" />
+		</attachments>
+		<attachments chance="1.00">
+			<item name="HatchbackWheel" chance="1.00" />
+		</attachments>
+		<attachments chance="1.00">
+			<item name="CarRadiator" chance="1.00" />
+		</attachments>
+		<attachments chance="1.00">
+			<item name="CarBattery" chance="1.00" />
+		</attachments>
+		<attachments chance="1.00">
+			<item name="SparkPlug" chance="1.00" />
+		</attachments>
+		<attachments chance="1.00">
+			<item name="HeadlightH7" chance="1.00" />
+		</attachments>
+		<attachments chance="1.00">
+			<item name="HeadlightH7" chance="1.00" />
+		</attachments>
+		<attachments chance="1.00">
+			<item name="HatchbackDoors_Driver" chance="0.70" />
+		</attachments>
+		<attachments chance="1.00">
+			<item name="HatchbackDoors_CoDriver" chance="0.70" />
+		</attachments>
+		<attachments chance="1.00">
+			<item name="HatchbackHood" chance="0.70" />
+		</attachments>
+		<attachments chance="1.00">
+			<item name="HatchbackTrunk" chance="0.70" />
+		</attachments>
+        </type>
+```
+4. Save the file and restart your server.
