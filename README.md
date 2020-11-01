@@ -329,7 +329,7 @@ Cars can spawn with cargo in them, for example you may want to provide canteen o
 ```
 4. Save the file and restart your server.
 
-### How to make your car fly
+### How to make cars fly
 Yes Dayz can have flying cars !!!
 
 1. Make your server 70 slots.
