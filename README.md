@@ -5,7 +5,7 @@ This is a tutorial to customize a Dayz Server for Xbox.
 I collected this knowledge by being an admin for 6 months and I wanted to make this knowledge public to others, so they can easily know how to customize their servers.
 
 ## Table of content
-- [General Configurations](#global-configurations)
+- [General configurations](#global-configurations)
 - [Territory flags configurations](#territory-flags-configurations)
 - [Car related configurations](#car-related-configurations)
 
