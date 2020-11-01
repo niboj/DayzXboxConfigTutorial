@@ -215,8 +215,8 @@ Cars can spawn with cargo in them, for example you may want to provide canteen o
 3. Add an attachement tag for each item you want to add in the cars. Remember a car can hold a maximum of 300 slots. For example: 
 ```xml
 	<type name="OffroadHatchback">
-	... (car parts attachments) 
-	<attachments chance="1.00">
+		<!-- Car parts attachments goes here -->
+		<attachments chance="1.00">
 			<item name="Canteen" chance="1.00" />
 		</attachments>
 		<attachments chance="1.00">
