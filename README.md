@@ -106,10 +106,10 @@ An item is define like this, for example the ___canteen___ item :
 - The ___flags___ tag tells how the game engine counts or spawn the items on the maps. 
 	- The ___count_in_cargo___ attribute is for items stored in container items (cars, tents, etc.).
 	- The ___count_in_hoarder___ attribute is for items stored in containers your wear.
-	- The___count_in_map___ attribute for items spawned in buildings and area all around the map.
-	-The___count_in_player___ attribute for items your wear.
-	- The___deloot___ attribute tells this item will only spawn on events (like helicrashes).
-	- The___crafted___ attribute I have no idea.
+	- The ___count_in_map___ attribute for items spawned in buildings and area all around the map.
+	- The ___count_in_player___ attribute for items your wear.
+	- The ___deloot___ attribute tells this item will only spawn on events (like helicrashes).
+	- The ___crafted___ attribute I have no idea.
 > ___1 = true___ and __0 = false___
 - The ___category___ tag is used to categorize items and is used in the ___mapgrouppos.xml___ file to spawn certain types of items in buildings.
 > In this case ___food___.
