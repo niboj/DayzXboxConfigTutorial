@@ -104,7 +104,8 @@ An item is define like this, for example the ___canteen___ item :
 - The ___cost___ tag is the priority this item will be spawn over to others. 
 > In this case ___100___.
 - The ___flags___ tag tells how the game engine counts or spawn the items on the maps. 
-> ___1___ = true, ___0___ = false. <
+> ___1___ = true, ___0___ = false. 
+
 	-- ___count_in_cargo___ for items stored in container items (cars, tents, etc.).
 	-- ___count_in_hoarder___ for items stored in containers your wear.
 	-- ___count_in_map___ for items spawned in buildings and area all around the map.
