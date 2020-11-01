@@ -15,11 +15,13 @@ I collected this knowledge by being an admin for 6 months and I wanted to make t
 
 ### Tiers
 The dayz map is divided in 4 tiers. Tiers are used to define area where certain items can spawn.
-- Tier 1 
-- Tier 2
-- Tier 3
-- Tier 4
+- Tier 1 : pale green
+- Tier 2 : dark green
+- Tier 3 : flashy green
+- Tier 4 : red
+
 ![Tiers](./tiers.jpg)
+
 ## Global configurations
 
 ### Change the despawn timers of things in the world
