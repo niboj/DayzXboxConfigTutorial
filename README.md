@@ -132,7 +132,7 @@ In order to make all car, working and broken ones, despawn and respawn brand new
 6. Save the file and restart your server. 
 > All cars should know respawn as brand new one.
 
-### How to make car non persistant
+### How to make cars non persistant
 In order to make car non persistant, by that I mean despawn and respawn after every server restart : 
 
 1. Despawn all cars.
@@ -189,16 +189,16 @@ Cars in dayz spawn with random ___attachments___, in order to make then always f
 			<item name="HeadlightH7" chance="1.00" />
 		</attachments>
 		<attachments chance="1.00">
-			<item name="HatchbackDoors_Driver" chance="0.70" />
+			<item name="HatchbackDoors_Driver" chance="1.00" />
 		</attachments>
 		<attachments chance="1.00">
-			<item name="HatchbackDoors_CoDriver" chance="0.70" />
+			<item name="HatchbackDoors_CoDriver" chance="1.00" />
 		</attachments>
 		<attachments chance="1.00">
-			<item name="HatchbackHood" chance="0.70" />
+			<item name="HatchbackHood" chance="1.00" />
 		</attachments>
 		<attachments chance="1.00">
-			<item name="HatchbackTrunk" chance="0.70" />
+			<item name="HatchbackTrunk" chance="1.00" />
 		</attachments>
         </type>
 ```
