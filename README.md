@@ -8,6 +8,7 @@ I collected this knowledge by being an admin for 6 months and I wanted to make t
 - [General configurations](#global-configurations)
 - [Messages configurations](#Messages-configurations)
 - [Items configurations](#Items-configurations)
+- [Events configurations](#E
 - [Territory flags configurations](#territory-flags-configurations)
 - [Car related configurations](#car-related-configurations)
 
@@ -15,10 +16,10 @@ I collected this knowledge by being an admin for 6 months and I wanted to make t
 
 ### Tiers
 The dayz map is divided in 4 tiers. Tiers are used to define area where certain items can spawn. It's not clear which tier are what part of the map...
-- Tier 1 (probably light green)
-- Tier 2 (probably dark green)
-- Tier 3 (probably blue)
-- Tier 4  (probably red)
+- Tier 1 (probably light green).
+- Tier 2 (probably dark green).
+- Tier 3 (probably blue).
+- Tier 4  (probably red).
 
 ![Tiers](./tiers.jpg)
 
@@ -134,6 +135,9 @@ Change the ___nominal___ value.
 ### How to make items spawn full
 Items containing ammo, pills and liquids, etc. will spawn full if you set ___quantmin___ to ___100___ and ___quantmax___ to ___100___
 
+## Events configurations
+
+TODO
 
 ## Territory flags configurations
 Territory flags (flag poles) in Dayz have the hability to refresh to despawn timers on item around them. You can change the behaviors of territory flags with the following configurations.
