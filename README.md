@@ -1,4 +1,4 @@
-# DayzXboxConfigTutorial
+# Dayz Xbox Configuration Tutorial
 
 This is a tutorial to customize a Dayz Server for Xbox. 
 
@@ -11,7 +11,15 @@ I collected this knowledge by being an admin for 6 months and I wanted to make t
 - [Territory flags configurations](#territory-flags-configurations)
 - [Car related configurations](#car-related-configurations)
 
+## Concepts
 
+### Tiers
+The dayz map is divided in 4 tiers. Tiers are used to define area where certain items can spawn.
+- Tier 1 
+- Tier 2
+- Tier 3
+- Tier 4
+![Tiers](./tiers.jpg)
 ## Global configurations
 
 ### Change the despawn timers of things in the world
@@ -90,6 +98,7 @@ An item is define like this, for example the ___canteen___ item :
 		<usage name="Hunting"/>
 		<usage name="Town"/>
 		<usage name="Village"/>
+		<value name="Tier1"/>
     	</type>
 ```
 
@@ -110,6 +119,7 @@ An item is define like this, for example the ___canteen___ item :
 	- The ___count_in_player___ attribute for items your wear.
 	- The ___deloot___ attribute tells this item will only spawn on events (like helicrashes).
 	- The ___crafted___ attribute I have no idea.
+	- The ___value___ attribute will tell in which ___[tier](#tiers#)___ of the map the items will spawn.
 > ___1 = true___ and ___0 = false___
 - The ___category___ tag is used to categorize items and is used in the ___mapgrouppos.xml___ file to spawn certain types of items in buildings.
 > In this case ___food___.
