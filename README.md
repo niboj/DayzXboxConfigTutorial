@@ -33,7 +33,7 @@ The dayz map is divided in 4 tiers. Tiers are used to define area where certain 
 
 ### Change the despawn timers of things in the world
 ruined items, dead players, animals and dead zombies despawn timer can be changed. 
-1. Open the ___Globals.xml___ file.
+1. Open the file ___Globals.xml___.
 2. Find the appropriate tag you want to change :
 ```xml
     <var name="CleanupLifetimeDeadAnimal" type="0" value="1200"/>
@@ -49,7 +49,7 @@ ruined items, dead players, animals and dead zombies despawn timer can be change
 
 ### Change the maximum number of items found on the map
 Dayz limits the number of items you can find on the map to ___1200___. You can change this value, but be warn it can affect the server performance.
-1. Open the ___Globals.xml___ file.
+1. Open the file ___Globals.xml___.
 2. Find the ___SpawnInitial___ tag :
 ```xml
 <var name="SpawnInitial" type="0" value="1200"/>
@@ -60,7 +60,7 @@ Dayz limits the number of items you can find on the map to ___1200___. You can c
 ### Change the maximum number of zombies on the map
 
 Dayz limits the number of zombies players can encounters on the map to ___800___. You can change this value, but be warn it can affect the server performance.
-1. Open the ___Globals.xml___ file.
+1. Open the file ___Globals.xml___.
 2. Find the ___ZombieMaxCount___ tag :
 ```xml
 <var name="ZombieMaxCount" type="0" value="800"/>
@@ -71,7 +71,7 @@ Dayz limits the number of zombies players can encounters on the map to ___800___
 ### Change the maximum number of animals on the map
 
 Dayz limits the number of animals players can encounters on the map to ___200___. You can change this value, but be warn it can affect the server performance.
-1. Open the ___Globals.xml___ file.
+1. Open the file ___Globals.xml___.
 2. Find the ___AnimalMaxCount___ tag :
 ```xml
  <var name="AnimalMaxCount" type="0" value="200"/>
@@ -163,7 +163,16 @@ Items containing ammo, pills and liquids, etc. will spawn full if you set ___qua
     </event>
 ```
 
+```xml
+	<event name="ItemSantasHat"> 
+		<pos x="8439.78" z="12895.50" a="180" />   
+	</event>
+```
 
+> The ___name___ element must be the same than your event name.
+> The ___x___ is the X coordinate.
+> The ___z___ is the Z coordinate. 
+> The ___a___ is the angle (0-360) of the item. The value ___0___ means facing north. Setting the value to ___-1___ will randomize the angle of the item.
 
 ### How do i spawn something on the map
 In Dayz you can spawn items, buildings, NPCs and animals. Developpers also added hidden items you can add to the game.
@@ -172,7 +181,7 @@ Here is a list of items you can spawn in version 1.09 : [class-dump-1.09-class-n
 
 > in order to spawn for example an ___item___ you have to have this item name.
 
-1. Open the ___type.xml___ file.
+1. Open the file ___type.xml___.
 2. Find the item you want to spawn, for example : 
 ```xml
 <type name="SantasHat">
@@ -193,7 +202,8 @@ Here is a list of items you can spawn in version 1.09 : [class-dump-1.09-class-n
 3. Copy the name attribute of the item you want to spawn. In this cas ___SantasHat___.
 > Now you need to define the ___event___ that will be used to spawn the ___item___.
 4. Open the ___event.xml___ file. 
-5. Add an event entry like this : 
+5. Add an event entry like this by adding the name on the item you want to spawn in the ___type___ attribute of the ___child___ tag : 
+>Be sure to give a unique ___name___ to your event 
 ```xml
 <event name="ItemSantasHat">
         <nominal>1</nominal>
@@ -213,16 +223,22 @@ Here is a list of items you can spawn in version 1.09 : [class-dump-1.09-class-n
         </children>
     </event>
 ```
-
-
-
+> The last step is to set the location where you want to spawn you item.
+6. Open the file ___cfgeventspawns.xml___.
+7. Add the following entry by setting the ___x, z, and a attribute___ to the coordinates of the location where you want the item to spawn.
+```xml
+	<event name="ItemSantasHat"> 
+		<pos x="8439.78" z="12895.50" a="180" />   
+	</event>
+``` 
+8. Save the files and restart your server.
 
 ## Territory flags configurations
 Territory flags (flag poles) in Dayz have the hability to refresh to despawn timers on item around them. You can change the behaviors of territory flags with the following configurations.
 
 ### Change the refresh frenquency of territory flags
 Territory flag normally take 5 days to get down when it is fully raised. In order to change this behavior :
-1. Open the ___Globals.xml___ file.
+1. Open the file ___Globals.xml___.
 2. Find the ___FlagRefreshFrequency___ tag :
 ```xml
 <var name="FlagRefreshFrequency" type="0" value="432000"/>
@@ -233,7 +249,7 @@ Territory flag normally take 5 days to get down when it is fully raised. In orde
 
 ### Change the refresh maximum duration of territory flags
 Territory flag normally when they are not fully down, refreshes the despawn timer of all items (items on the floor, fences, containers items, etc.) 60 meters around them. In order to change this behavior :
-1. Open the ___Globals.xml___ file.
+1. Open the file ___Globals.xml___.
 2. Find the ___FlagRefreshMaxDuration___ tag :
 ```xml
 <var name="FlagRefreshMaxDuration" type="0" value="1296000"/>
@@ -254,7 +270,7 @@ Others like the VS3 truck and the bus are non functionnal.
 
 ### How to spawn more cars
 In order to spawn more cars :
-1. Open the ___event.xml___ file.
+1. Open the file ___event.xml___.
 2. Find the event of the car you want to spawn more.
 > Vehicule events name always begins with ___Vehicule___
 ```xml
@@ -309,7 +325,7 @@ In order to spawn more cars :
 ### How to despawn all cars and make then respawn brand new
 In order to make all car, working and broken ones, despawn and respawn brand new :
 
-1. Open the ___event.xml___ file.
+1. Open the file ___event.xml___.
 2. For each car type you want to despawn find the corresponding event, for example : 
 ```xml
 <event name="VehicleOffroadHatchback">
@@ -370,7 +386,7 @@ In order to make car non persistant, by that I mean despawn and respawn after ev
 1. Despawn all cars.
 > This is to make sure your cars will spawn as brand new one. 
 > Not doing this will make car spawn in their last known state. 
-3. Open the ___economy.xml___ file.
+3. Open the file ___economy.xml___.
 4. Find the ___vehicules___ tag.
 5. Change the ___save___ parameter to ___0___
 
