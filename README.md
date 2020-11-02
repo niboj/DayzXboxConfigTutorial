@@ -143,14 +143,36 @@ Items containing ammo, pills and liquids, etc. will spawn full if you set ___qua
 
 ## Events configurations
 
+```xml
+<event name="ItemSantasHat">
+        <nominal>1</nominal>
+        <min>1</min>
+        <max>1</max>
+        <lifetime>14400</lifetime>
+        <restock>1200</restock>
+        <saferadius>1</saferadius>
+        <distanceradius>1</distanceradius>
+        <cleanupradius>100</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="0"/>
+        <position>fixed</position>
+        <limit>child</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="255" min="60" type="SantasHat"/>
+        </children>
+    </event>
+```
+
+
+
+### How do i spawn something on the map
 In Dayz you can spawn items, buildings, NPCs and animals. Developpers also added hidden items you can add to the game.
 
-Here is a list of items you can spawn in version 1.09 : 
-> [class-dump-1.09-class-names-by-Bhaalshad.txt](./class-dump-1.09-class-names-by-Bhaalshad.txt)
+Here is a list of items you can spawn in version 1.09 : [class-dump-1.09-class-names-by-Bhaalshad.txt](./class-dump-1.09-class-names-by-Bhaalshad.txt)
 
-### How do i spawn something
-in order to spawn for example an ___item___ you have to have this item name.
-1. Open the type.xml file.
+> in order to spawn for example an ___item___ you have to have this item name.
+
+1. Open the ___type.xml___ file.
 2. Find the item you want to spawn, for example : 
 ```xml
 <type name="SantasHat">
@@ -170,6 +192,27 @@ in order to spawn for example an ___item___ you have to have this item name.
 ```
 3. Copy the name attribute of the item you want to spawn. In this cas ___SantasHat___.
 > Now you need to define the ___event___ that will be used to spawn the ___item___.
+4. Open the ___event.xml___ file. 
+5. Add an event entry like this : 
+```xml
+<event name="ItemSantasHat">
+        <nominal>1</nominal>
+        <min>1</min>
+        <max>1</max>
+        <lifetime>14400</lifetime>
+        <restock>1200</restock>
+        <saferadius>1</saferadius>
+        <distanceradius>1</distanceradius>
+        <cleanupradius>100</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="0"/>
+        <position>fixed</position>
+        <limit>child</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="255" min="60" type="SantasHat"/>
+        </children>
+    </event>
+```
 
 
 
