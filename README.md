@@ -172,11 +172,11 @@ Events are defined in the file ___event.xml___. An event definition looks like t
     </event>
 ```
 - An event ___name___ must begin by following words : 
--- ___static___ for buildings
--- ___item___ for items
--- ___animals___ for items
--- ___Infected___ for zombies
--- ___Trajectory___ for fruits and stones
+	- ___static___ for buildings
+	- ___item___ for items
+	- ___animals___ for items
+	- ___Infected___ for zombies
+	- ___Trajectory___ for fruits and stones
 
 - The ___nominal___ value is the average number of active instances of this event on the server .
 - The ___min___ value is the minimum number of active instances of this event on the server.
