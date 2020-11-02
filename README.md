@@ -161,6 +161,7 @@ Events are defined in the file ___event.xml___. An event definition looks like t
         <saferadius>1</saferadius>
         <distanceradius>1</distanceradius>
         <cleanupradius>100</cleanupradius>
+	<secondary>InfectedArmy</secondary>
         <flags deletable="0" init_random="0" remove_damaged="0"/>
         <position>fixed</position>
         <limit>child</limit>
@@ -170,14 +171,28 @@ Events are defined in the file ___event.xml___. An event definition looks like t
         </children>
     </event>
 ```
-An event ___name___ must begin by following words : 
-- ___static___ for buildings
-- ___item___ for items
-- ___animals___ for items
-- ___Infected___ for zombies
-- ___Trajectory___ for fruits and stones
+- An event ___name___ must begin by following words : 
+-- ___static___ for buildings
+-- ___item___ for items
+-- ___animals___ for items
+-- ___Infected___ for zombies
+-- ___Trajectory___ for fruits and stones
 
-An event also have some coodinates that tells the game were to spawn this event. Event's coodinates are defined in the file ___cfgeventspawns.xml___.
+- The ___nominal___ value is the average number of active instances of this event on the server .
+- The ___min___ value is the minimum number of active instances of this event on the server.
+- The ___max___ value is the maximum number of active instances of this event on the server.
+- The ___lifetime___ value is the time in seconds that an event of this type will stay active on the server.
+- The ___restock___ value is the time in seconds between each event invocations once the ___min___ number of active instances have been reached.
+- The ___saferadius___ is the distance away from the player position that this event can spawn.
+- The ___distanceradius___ is the minimum distance away from other similar event.
+- The ___cleanupradius___ is the distance away from the player position that the event will despawn after lifetime ticks down.
+- The ___secondary___ tag is the name of an other event you want to spawn at the same time than this event, for example to spawn zombies around a building or an item.
+- The ___position___ value (___player or fixed___) determines whether distance is counted from the player position or from a fixed position.
+- The ___limit___ value (___custom, parent, child, mixed___) is how the maximum number of active event is counted. A ___custom___ limit refer to an external file like for animals territories.
+- The ___active___ value (___0 = false, 1 = true___) is an indicator to activate or deactivate these events.
+- The ___children___ tags are the items that will spawn with the events of this type.
+
+An event also have some coodinates that tells the game were to spawn this event. Event's coodinates entries are defined in the file ___cfgeventspawns.xml___ and looks like this.
 
 ```xml
 	<event name="ItemSantasHat"> 
@@ -187,10 +202,10 @@ An event also have some coodinates that tells the game were to spawn this event.
 	</event>
 ```
 
-> The ___name___ element must be the same than your event name.
-> The ___x___ is the X coordinate.
-> The ___z___ is the Z coordinate. 
-> The ___a___ is the angle (0-360) of the item. The value ___0___ means facing north. Setting the value to ___-1___ will randomize the angle of the item.
+- The ___name___ element must be the same than your event name.
+- The ___x___ is the X coordinate.
+- The ___z___ is the Z coordinate. 
+- The ___a___ is the angle (0-360) of the item. The value ___0___ means facing north. Setting the value to ___-1___ will randomize the angle of the item.
 
 ### How do i spawn something on the map
 In Dayz you can spawn items, buildings, NPCs and animals. Developpers also added hidden items you can add to the game.
