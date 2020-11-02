@@ -143,6 +143,14 @@ Items containing ammo, pills and liquids, etc. will spawn full if you set ___qua
 
 ## Events configurations
 
+Events are used to control how things spawns in the world. Those things can be : 
+- Animals
+- Zombies
+- Items
+- Vehicules
+
+Events are defined in the file ___event.xml___. An event definition looks like this
+
 ```xml
 <event name="ItemSantasHat">
         <nominal>1</nominal>
@@ -162,10 +170,20 @@ Items containing ammo, pills and liquids, etc. will spawn full if you set ___qua
         </children>
     </event>
 ```
+An event ___name___ must begin by following words : 
+- ___static___ for buildings
+- ___item___ for items
+- ___animals___ for items
+- ___Infected___ for zombies
+- ___Trajectory___ for fruits and stones
+
+An event also have some coodinates that tells the game were to spawn this event. Event's coodinates are defined in the file ___cfgeventspawns.xml___.
 
 ```xml
 	<event name="ItemSantasHat"> 
-		<pos x="8439.78" z="12895.50" a="180" />   
+		<pos x="8439.78" z="12895.50" a="180" />
+		<pos x="6877.84" z="11456.92" a="75" />     
+		<pos x="4468.68" z="13925.41" a="75" />
 	</event>
 ```
 
@@ -199,7 +217,7 @@ Here is a list of items you can spawn in version 1.09 : [class-dump-1.09-class-n
         <usage name="Village"/>
     </type>
 ```
-3. Copy the name attribute of the item you want to spawn. In this cas ___SantasHat___.
+3. Copy the name attribute of the item you want to spawn. In this case ___SantasHat___.
 > Now you need to define the ___event___ that will be used to spawn the ___item___.
 4. Open the ___event.xml___ file. 
 5. Add an event entry like this by adding the name on the item you want to spawn in the ___type___ attribute of the ___child___ tag : 
