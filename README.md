@@ -14,7 +14,7 @@ If this tutorial is helpul to you and you want to contribute to my effort in doc
 - [General configurations](#global-configurations)
 - [Messages configurations](#Messages-configurations)
 - [Items configurations](#Items-configurations)
-- [Events configurations](#E
+- [Events configurations](#events-configurations)
 - [Territory flags configurations](#territory-flags-configurations)
 - [Car related configurations](#car-related-configurations)
 
@@ -143,7 +143,10 @@ Items containing ammo, pills and liquids, etc. will spawn full if you set ___qua
 
 ## Events configurations
 
-TODO
+In Dayz you can spawn items, buildings, NPCs and animals. 
+
+Here is a list of items you can spawn in version 1.09 : 
+> [class-dump-1.09-class-names-by-Bhaalshad.txt](./class-dump-1.09-class-names-by-Bhaalshad.txt)
 
 ## Territory flags configurations
 Territory flags (flag poles) in Dayz have the hability to refresh to despawn timers on item around them. You can change the behaviors of territory flags with the following configurations.
