@@ -15,6 +15,7 @@ If this tutorial is helpul to you and you want to contribute to my efforts in do
 - [Messages configurations](#Messages-configurations)
 - [Items configurations](#Items-configurations)
 - [Events configurations](#events-configurations)
+- [Loadout customizations](Loadout-customizations)
 - [Territory flags configurations](#territory-flags-configurations)
 - [Car related configurations](#car-related-configurations)
 
@@ -265,6 +266,13 @@ Here is a list of items you can spawn in version 1.09 : [class-dump-1.09-class-n
 	</event>
 ``` 
 8. Save the files and restart your server.
+
+### How do I spawn non player caracters (NPCs)
+> Todo
+
+## Loadout customizations
+
+> Todo
 
 ## Territory flags configurations
 Territory flags (flag poles) in Dayz have the hability to refresh to despawn timers on item around them. You can change the behaviors of territory flags with the following configurations.
