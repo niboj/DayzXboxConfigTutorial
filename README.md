@@ -15,7 +15,7 @@ If this tutorial is helpul to you and you want to contribute to my efforts in do
 - [Messages configurations](#Messages-configurations)
 - [Items configurations](#Items-configurations)
 - [Events configurations](#events-configurations)
-- [Loadout customizations](Loadout-customizations)
+- [Loadout customizations](#loadout-customizations)
 - [Territory flags configurations](#territory-flags-configurations)
 - [Car related configurations](#car-related-configurations)
 
