@@ -152,24 +152,24 @@ Events are used to control how things spawns in the world. Those things can be :
 Events are defined in the file ___event.xml___. An event definition looks like this
 
 ```xml
-<event name="ItemSantasHat">
-        <nominal>1</nominal>
-        <min>1</min>
-        <max>1</max>
-        <lifetime>14400</lifetime>
-        <restock>1200</restock>
-        <saferadius>1</saferadius>
-        <distanceradius>1</distanceradius>
-        <cleanupradius>100</cleanupradius>
-	<secondary>InfectedArmy</secondary>
-        <flags deletable="0" init_random="0" remove_damaged="0"/>
-        <position>fixed</position>
-        <limit>child</limit>
-        <active>1</active>
-        <children>
-            <child lootmax="0" lootmin="0" max="255" min="60" type="SantasHat"/>
-        </children>
-    </event>
+	<event name="ItemSantasHat">
+		<nominal>1</nominal>
+		<min>1</min>
+		<max>1</max>
+		<lifetime>14400</lifetime>
+		<restock>1200</restock>
+		<saferadius>1</saferadius>
+		<distanceradius>1</distanceradius>
+		<cleanupradius>100</cleanupradius>
+		<secondary>InfectedArmy</secondary>
+		<flags deletable="0" init_random="0" remove_damaged="0"/>
+		<position>fixed</position>
+		<limit>child</limit>
+		<active>1</active>
+		<children>
+		    <child lootmax="0" lootmin="0" max="255" min="60" type="SantasHat"/>
+		</children>
+	</event>
 ```
 - An event ___name___ must begin by following words : 
 	- ___static___ for buildings
@@ -217,20 +217,20 @@ Here is a list of items you can spawn in version 1.09 : [class-dump-1.09-class-n
 1. Open the file ___type.xml___.
 2. Find the item you want to spawn, for example : 
 ```xml
-<type name="SantasHat">
-        <nominal>1</nominal>
-        <lifetime>3600</lifetime>
-        <restock>0</restock>
-        <min>1</min>
-        <quantmin>-1</quantmin>
-        <quantmax>-1</quantmax>
-        <cost>100</cost>
-        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
-        <category name="clothes"/>
-        <tag name="shelves"/>
-        <usage name="Town"/>
-        <usage name="Village"/>
-    </type>
+	<type name="SantasHat">
+		<nominal>1</nominal>
+		<lifetime>3600</lifetime>
+		<restock>0</restock>
+		<min>1</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>100</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="clothes"/>
+		<tag name="shelves"/>
+		<usage name="Town"/>
+		<usage name="Village"/>
+    	</type>
 ```
 3. Copy the name attribute of the item you want to spawn. In this case ___SantasHat___.
 > Now you need to define the ___event___ that will be used to spawn the ___item___.
@@ -238,23 +238,23 @@ Here is a list of items you can spawn in version 1.09 : [class-dump-1.09-class-n
 5. Add an event entry like this by adding the name on the item you want to spawn in the ___type___ attribute of the ___child___ tag : 
 >Be sure to give a unique ___name___ to your event 
 ```xml
-<event name="ItemSantasHat">
-        <nominal>1</nominal>
-        <min>1</min>
-        <max>1</max>
-        <lifetime>14400</lifetime>
-        <restock>1200</restock>
-        <saferadius>1</saferadius>
-        <distanceradius>1</distanceradius>
-        <cleanupradius>100</cleanupradius>
-        <flags deletable="0" init_random="0" remove_damaged="0"/>
-        <position>fixed</position>
-        <limit>child</limit>
-        <active>1</active>
-        <children>
-            <child lootmax="0" lootmin="0" max="255" min="60" type="SantasHat"/>
-        </children>
-    </event>
+	<event name="ItemSantasHat">
+		<nominal>1</nominal>
+		<min>1</min>
+		<max>1</max>
+		<lifetime>14400</lifetime>
+		<restock>1200</restock>
+		<saferadius>1</saferadius>
+		<distanceradius>1</distanceradius>
+		<cleanupradius>100</cleanupradius>
+		<flags deletable="0" init_random="0" remove_damaged="0"/>
+		<position>fixed</position>
+		<limit>child</limit>
+		<active>1</active>
+		<children>
+		    <child lootmax="0" lootmin="0" max="255" min="60" type="SantasHat"/>
+		</children>
+    	</event>
 ```
 > The last step is to set the location where you want to spawn you item.
 6. Open the file ___cfgeventspawns.xml___.
@@ -307,25 +307,25 @@ In order to spawn more cars :
 2. Find the event of the car you want to spawn more.
 > Vehicule events name always begins with ___Vehicule___
 ```xml
-<event name="VehicleOffroadHatchback">
-        <nominal>4</nominal>
-        <min>1</min>
-        <max>8</max>
-        <lifetime>300</lifetime>
-        <restock>0</restock>
-        <saferadius>500</saferadius>
-        <distanceradius>500</distanceradius>
-        <cleanupradius>200</cleanupradius>
-        <flags deletable="0" init_random="0" remove_damaged="1"/>
-        <position>fixed</position>
-        <limit>mixed</limit>
-        <active>1</active>
-        <children>
-            <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback"/>
-            <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback_Blue"/>
-            <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback_White"/>
-        </children>
-    </event>
+	<event name="VehicleOffroadHatchback">
+		<nominal>4</nominal>
+		<min>1</min>
+		<max>8</max>
+		<lifetime>300</lifetime>
+		<restock>0</restock>
+		<saferadius>500</saferadius>
+		<distanceradius>500</distanceradius>
+		<cleanupradius>200</cleanupradius>
+		<flags deletable="0" init_random="0" remove_damaged="1"/>
+		<position>fixed</position>
+		<limit>mixed</limit>
+		<active>1</active>
+		<children>
+		    <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback"/>
+		    <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback_Blue"/>
+		    <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback_White"/>
+		</children>
+    	</event>
 ```
 3. Change the ___min___, ___max___ and ___nominal___ tags to the values you want.
 - ___min___ is the minimum number of this type of car you want on the map.
@@ -333,25 +333,25 @@ In order to spawn more cars :
 - ___nominal___ is the average number of this type of car you want on the map.
 
 ```xml
-<event name="VehicleOffroadHatchback">
-        <nominal>20</nominal>
-        <min>10</min>
-        <max>30</max>
-        <lifetime>300</lifetime>
-        <restock>0</restock>
-        <saferadius>500</saferadius>
-        <distanceradius>500</distanceradius>
-        <cleanupradius>200</cleanupradius>
-        <flags deletable="0" init_random="0" remove_damaged="1"/>
-        <position>fixed</position>
-        <limit>mixed</limit>
-        <active>1</active>
-        <children>
-            <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback"/>
-            <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback_Blue"/>
-            <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback_White"/>
-        </children>
-    </event>
+	<event name="VehicleOffroadHatchback">
+		<nominal>20</nominal>
+		<min>10</min>
+		<max>30</max>
+		<lifetime>300</lifetime>
+		<restock>0</restock>
+		<saferadius>500</saferadius>
+		<distanceradius>500</distanceradius>
+		<cleanupradius>200</cleanupradius>
+		<flags deletable="0" init_random="0" remove_damaged="1"/>
+		<position>fixed</position>
+		<limit>mixed</limit>
+		<active>1</active>
+		<children>
+		    <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback"/>
+		    <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback_Blue"/>
+		    <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback_White"/>
+		</children>
+    	</event>
 ```
 4. Save the file and restart the server.
 
@@ -366,49 +366,49 @@ In order to make all car, working and broken ones, despawn and respawn brand new
 
 3.change the ___active___ tag to ___0___.
 ```xml
-<event name="VehicleOffroadHatchback">
-        <nominal>40</nominal>
-        <min>20</min>
-        <max>70</max>
-        <lifetime>300</lifetime>
-        <restock>0</restock>
-        <saferadius>500</saferadius>
-        <distanceradius>500</distanceradius>
-        <cleanupradius>200</cleanupradius>
-        <flags deletable="0" init_random="0" remove_damaged="1"/>
-        <position>fixed</position>
-        <limit>mixed</limit>
-        <active>0</active>
-        <children>
-            <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback"/>
-            <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback_Blue"/>
-            <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback_White"/>
-        </children>
-    </event>
+	<event name="VehicleOffroadHatchback">
+		<nominal>40</nominal>
+		<min>20</min>
+		<max>70</max>
+		<lifetime>300</lifetime>
+		<restock>0</restock>
+		<saferadius>500</saferadius>
+		<distanceradius>500</distanceradius>
+		<cleanupradius>200</cleanupradius>
+		<flags deletable="0" init_random="0" remove_damaged="1"/>
+		<position>fixed</position>
+		<limit>mixed</limit>
+		<active>0</active>
+		<children>
+		    <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback"/>
+		    <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback_Blue"/>
+		    <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback_White"/>
+		</children>
+    	</event>
 ```
 4. Save the file and restart your server. 
 > This will make all car despawn.
 5. For each car event you changed in the ___event.xml___ file, change back the ___active___ tag to ___1___.
 ```xml
-<event name="VehicleOffroadHatchback">
-        <nominal>40</nominal>
-        <min>20</min>
-        <max>70</max>
-        <lifetime>300</lifetime>
-        <restock>0</restock>
-        <saferadius>500</saferadius>
-        <distanceradius>500</distanceradius>
-        <cleanupradius>200</cleanupradius>
-        <flags deletable="0" init_random="0" remove_damaged="1"/>
-        <position>fixed</position>
-        <limit>mixed</limit>
-        <active>1</active>
-        <children>
-            <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback"/>
-            <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback_Blue"/>
-            <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback_White"/>
-        </children>
-    </event>
+	<event name="VehicleOffroadHatchback">
+		<nominal>40</nominal>
+		<min>20</min>
+		<max>70</max>
+		<lifetime>300</lifetime>
+		<restock>0</restock>
+		<saferadius>500</saferadius>
+		<distanceradius>500</distanceradius>
+		<cleanupradius>200</cleanupradius>
+		<flags deletable="0" init_random="0" remove_damaged="1"/>
+		<position>fixed</position>
+		<limit>mixed</limit>
+		<active>1</active>
+		<children>
+		    <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback"/>
+		    <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback_Blue"/>
+		    <child lootmax="0" lootmin="0" max="15" min="3" type="OffroadHatchback_White"/>
+		</children>
+    	</event>
 ```
 6. Save the file and restart your server. 
 > All cars should know respawn as brand new one.
@@ -438,7 +438,7 @@ Cars in dayz spawn with random ___attachments___, in order to make then always f
 ```
 3.For each ___attachments___ tag, change the ___chance___ attribute value to ___1.00___ and also for the following ___item___ tag change the chance attribute value to ___1.00___
 ```xml
-<type name="OffroadHatchback">
+	<type name="OffroadHatchback">
 		<attachments chance="1.00">
 			<item name="HatchbackWheel" chance="1.00" />
 		</attachments>
