@@ -143,10 +143,36 @@ Items containing ammo, pills and liquids, etc. will spawn full if you set ___qua
 
 ## Events configurations
 
-In Dayz you can spawn items, buildings, NPCs and animals. 
+In Dayz you can spawn items, buildings, NPCs and animals. Developpers also added hidden items you can add to the game.
 
 Here is a list of items you can spawn in version 1.09 : 
 > [class-dump-1.09-class-names-by-Bhaalshad.txt](./class-dump-1.09-class-names-by-Bhaalshad.txt)
+
+### How do i spawn something
+in order to spawn for example an ___item___ you have to have this item name.
+1. Open the type.xml file.
+2. Find the item you want to spawn, for example : 
+```xml
+<type name="SantasHat">
+        <nominal>1</nominal>
+        <lifetime>3600</lifetime>
+        <restock>0</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="clothes"/>
+        <tag name="shelves"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+    </type>
+```
+3. Copy the name attribute of the item you want to spawn. In this cas ___SantasHat___.
+> Now you need to define the ___event___ that will be used to spawn the ___item___.
+
+
+
 
 ## Territory flags configurations
 Territory flags (flag poles) in Dayz have the hability to refresh to despawn timers on item around them. You can change the behaviors of territory flags with the following configurations.
