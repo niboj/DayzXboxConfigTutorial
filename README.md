@@ -4,7 +4,7 @@ This is a tutorial to customize a Dayz Server for Xbox.
 
 I collected this knowledge by being an admin for 6 months and I wanted to make this knowledge public to others, so they can easily know how to customize their servers.
 
-If this tutorial is helpul to you and you want to contribute to my effort in documenting how this game works, I wont mind a small donation through paypal : 
+If this tutorial is helpul to you and you want to contribute to my efforts in documenting how this game works, you can donate by using this link : 
 
 ![Donate](https://github.com/niboj/DayzXboxConfigTutorial/blob/main/Code%20QR.png?raw=true)
 
