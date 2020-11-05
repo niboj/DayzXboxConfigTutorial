@@ -11,6 +11,8 @@ If this tutorial is helpul to you and you want to contribute to my efforts in do
 [Paypal Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=3EX6J5S29U5P4&currency_code=CAD)
 
 ## Table of content
+- [Editing tools](#editing-tools)
+- [Concepts](#concepts)
 - [General configurations](#global-configurations)
 - [Messages configurations](#Messages-configurations)
 - [Items configurations](#Items-configurations)
@@ -18,6 +20,21 @@ If this tutorial is helpul to you and you want to contribute to my efforts in do
 - [Loadout customizations](#loadout-customizations)
 - [Territory flags configurations](#territory-flags-configurations)
 - [Car related configurations](#car-related-configurations)
+
+
+
+## Editing tools
+In order to efficiently edit the dayz config, you need a few tools : 
+- A PC (or a mac) : in order to install the other tools.
+- [Notepad++](https://notepad-plus-plus.org/downloads/) editor to edit the configuration files
+- Notepad++ XML Tools pluggin to validate the xml configuration files (to install go to notepad++ ___Pluggins->Pluggins admin___ menu).
+
+You could edit the files directly on the server, but by doing that you have chances to mess up the files.
+
+> A tiny caracter at the wrong place, can messed up the game by preventing zombies from spawning or preventing loot from spawning or prevent cars from spawning or make your player spawn at the default spawns,  etc.
+
+### Back ups
+Before editing you files, you should always make a copy of the originals in case you overrite a important configuration or if you messup a configuration file.
 
 ## Concepts
 
