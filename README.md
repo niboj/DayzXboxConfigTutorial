@@ -17,7 +17,7 @@ If this tutorial is helpul to you and you want to contribute to my efforts in do
 - [Messages configurations](#Messages-configurations)
 - [Items configurations](#Items-configurations)
 - [Events configurations](#events-configurations)
-- [Loadout customizations](#loadout-customizations)
+- [Loadout and attachments customizations](#loadout-and-attachments-customizations)
 - [Territory flags configurations](#territory-flags-configurations)
 - [Car related configurations](#car-related-configurations)
 - [References](#References)
@@ -347,15 +347,99 @@ Use [How do i spawn something on the map](#How-do-i-spawn-something-on-the-map) 
 
 > Thanks to Bhaalshad for the [tips](./WorkingNPC-By-Bhaalshad.txt) on how to spawn those NPC
 
-## Loadout customizations
+## Loadout and attachments customizations
 
 In Dayz you can cutomize loadout of zombies, npcs, vehicules and container items (bags, seachest, giftbox, etc)
 
 > Warning : if you change the loadout of an item, all items of this type will spawn with that loadout, custom spawns et randow spawns.
 
+Loadouts of items are configuration in the file ___cfgspawnabletypes.xml___. 
+
+> If an item entry is missing from this file, you can add a new entry with the item name of this item. For example if you want refridgerators to spawn food and drinks just add : 
+
+### Loadout of container items
+Container items like 
+
+```xml
+	<type name="Refridgerator">
+		<cargo chance="0.50">
+			<item name="Vodka" chance="1.00" /> 
+		</cargo>
+		<cargo chance="1.00">
+			<item name="Vodka" chance="0.50" /> 
+			<item name="SodaCan_Pipsi" chance="0.50" /> 
+		</cargo>
+		<cargo preset="foodVillage" />
+		<cargo chance="1.00">
+			<item name="WaterBottle" chance="1.00" /> 
+		</cargo>
+		<cargo chance="1.00">
+			<item name="WaterBottle" chance="1.00" /> 
+		</cargo>
+	</type>
+```
+- The ___type___ tag is used to refer to the ___name___ of the item you want to set the loadout.
+ 
+- The ___cargo___ tag is used to set the items you want to load in the container item. You can set a ___chance___ attribute to this tag in order to specify the randomness of an item to get load in the container item.
+
+- The ___item___ tags are use to set the item you want to load. You can set a ___chance___ attribute to this tag in order to specify the randomness of an item to get load in the container item. Multiple items can be set inside a ___cargo___ tag, but only one of these item will get load.
+> In order to spawn multiple item of the same type, add multiple ___cargo___ tags with the same item inside them (see WaterBottle item the above example).
+
+- You can also use preset in order to spawn items inside container items. Presets are define in the file ___cfgrandompresets.xml___ 
+```xml
+	<cargo chance="1.0" name="foodVillage">
+		<item name="TunaCan" chance="0.50" />
+		<item name="WaterBottle" chance="0.25" />
+		<item name="Apple" chance="0.25" />
+	</cargo>
+```
+
 > Tips : if you use container items to spawn items on the map, disable the random spawns of this type of item (see [How to prevent an item from spawning](#How-to-prevent-an-item-from-spawning).
 
+### Items attachments 
+Some items like guns, helmets, zombies, NPCs and cars have attachments. You can set which attachments spawns with those types of items in the file ___cfgspawnabletypes.xml___ like this : 
 
+```xml
+	<type name="ZmbM_PrisonerSkinny">
+		<attachments  chance="1.00">
+			<item name="GreatHelm" chance="1.00" />
+		</attachments>
+		<attachments  chance="1.00">
+			<item name="Sword" chance="1.00" />
+		</attachments>
+		<attachments  chance="1.00">
+			<item name="PrisonUniformJacket" chance="1.00" />
+		</attachments>
+		<attachments  chance="1.00">
+			<item name="PrisonUniformPants" chance="1.00" />
+		</attachments>	
+	</type>
+```
+
+Or like this: 
+```xml 
+	<type name="Saiga">
+		<attachments chance="1.00">
+			<item name="Saiga_Bttstck" chance="1.00" />
+		</attachments>
+		<attachments chance="1.00">
+			<item name="Mag_Saiga_5Rnd" chance="0.50" />
+			<item name="Mag_Saiga_8Rnd" chance="0.30" />
+			<item name="Mag_Saiga_Drum20Rnd" chance="0.20" />
+		</attachments>
+	</type>
+```
+
+Some items like zombies and NPCS can combine ___cargo___ and ___attachments___ : 
+```xml
+	<type name="ZmbM_VillagerOld_Green">
+		<cargo preset="foodVillage" />
+		<cargo preset="toolsVillage" />
+		<attachments preset="glassesVillage" />
+		<attachments preset="hatsFarm" />
+		<attachments preset="bagsVillage" />
+	</type>
+```
 ## Territory flags configurations
 Territory flags (flag poles) in Dayz have the hability to refresh to despawn timers on item around them. You can change the behaviors of territory flags with the following configurations.
 
