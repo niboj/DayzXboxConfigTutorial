@@ -20,6 +20,7 @@ If this tutorial is helpul to you and you want to contribute to my efforts in do
 - [Loadout customizations](#loadout-customizations)
 - [Territory flags configurations](#territory-flags-configurations)
 - [Car related configurations](#car-related-configurations)
+- [References](#References)
 
 
 ## Editing the files
@@ -597,3 +598,11 @@ Yes Dayz can have flying cars !!!
 2. Become very popular so that your server has more than 60 players.
 3. Drive a car. 
 > Dayz servers become very laggy when there are more thant 60 players playing, this makes car undrivable and sometimes makes them go off in the air. 
+
+# References
+
+Here is a list of cool references that showed me how to customize a dayz server.
+- [DonSibleyGames discord server](https://discord.gg/qFabj6aCRk) : has a community of modders and lots of examples.
+- [Bohemia Interactive Category:DayZ:Editing](https://community.bistudio.com/wiki/Category:DayZ:Editing) : provide some informations and examples.
+- [The Dead Return - How-To Customize A DayZ SA Server](https://helpthedeadreturn.wordpress.com/2019/07/17/how-to-customize-your-dayz-sa-vanilla-server/) : basic stuff
+- You can also find lots of post in Reddit.
