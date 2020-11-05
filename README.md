@@ -289,11 +289,45 @@ Here is a list of items you can spawn in version 1.09 : [class-dump-1.09-class-n
 8. Save the files and restart your server.
 
 ### How do I spawn non player caracters (NPCs)
-> Todo
+There is hidden NPC caracter you can spawn in the game. Those NPC don't do anything, but it can be funny or usefull to spawn them on the map. You can use them to deliver items, or as alarm for bases to know who raided you (with a killfeed). 
+
+Here is a list of all NPC items you can use : 
+
+- SurvivorF_Eva 
+- SurvivorF_Frida 
+- SurvivorF_Gabi 
+- SurvivorF_Helga 
+- SurvivorF_Irena 
+- SurvivorF_Judy 
+- SurvivorF_Keiko 
+- SurvivorF_Linda 
+- SurvivorF_Maria 
+- SurvivorF_Naomi 
+- SurvivorM_Boris 
+- SurvivorM_Cyril 
+- SurvivorM_Denis 
+- SurvivorM_Elias 
+- SurvivorM_Francis 
+- SurvivorM_Guo 
+- SurvivorM_Hassan 
+- SurvivorM_Indar 
+- SurvivorM_Jose 
+- SurvivorM_Kaito 
+- SurvivorM_Lewis 
+- SurvivorM_Manua 
+- SurvivorM_Mirek 
+- SurvivorM_Niki 
+- SurvivorM_Oliver 
+- SurvivorM_Peter 
+- SurvivorM_Quinn 
+- SurvivorM_Rolf 
+- SurvivorM_Seth 
+- SurvivorM_Taiki
+> thanks to Bhaalshad for the [tips](./WorkingNPC-By-Bhaalshad.txt) on how to spawn those NPC
 
 ## Loadout customizations
 
-> Todo
+
 
 ## Territory flags configurations
 Territory flags (flag poles) in Dayz have the hability to refresh to despawn timers on item around them. You can change the behaviors of territory flags with the following configurations.
