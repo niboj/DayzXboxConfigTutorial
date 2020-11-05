@@ -343,13 +343,13 @@ In Dayz you can cutomize loadout of zombies, npcs, vehicules and container items
 
 > Warning : if you change the loadout of an item, all items of this type will spawn with that loadout, custom spawns et randow spawns.
 
-> Tips : if you use container items to spawn items on the map, disable the random spawns of this type of item (see [#prevent-an-item-from-spawning]
+> Tips : if you use container items to spawn items on the map, disable the random spawns of this type of item (see [How to prevent an item from spawning](#How-to-prevent-an-item-from-spawning).
 
 
 ## Territory flags configurations
 Territory flags (flag poles) in Dayz have the hability to refresh to despawn timers on item around them. You can change the behaviors of territory flags with the following configurations.
 
-### Change the refresh frenquency of territory flags
+### Change the refresh frequency of territory flags
 Territory flag normally take 5 days to get down when it is fully raised. In order to change this behavior :
 1. Open the file ___Globals.xml___.
 2. Find the ___FlagRefreshFrequency___ tag :
