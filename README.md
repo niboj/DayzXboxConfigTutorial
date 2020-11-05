@@ -166,11 +166,21 @@ Items containing ammo, pills and liquids, etc. will spawn full if you set ___qua
 
 ### How to prevent an item from spawning
 If you don't want a particular item to randomly spawn on the map : 
-1- Open the file ___type.xml___.
-2- Find the item you want to prevent from the spawning on the map.
-3- Change the ___nominal___ value and ___min___ value of that item to ___0___
+1. Open the file ___type.xml___.
+2. Find the item you want to prevent from the spawning on the map.
+3. Change the ___nominal___ value and ___min___ value of that item to ___0___
+4. Restart the server.
 
-> This will not despawn any items of this type currently spawned on the map.
+> This will not despawn any items of this type already spawned on the map.
+
+### How to change the time an item takes to spawning
+If you don't want a particular item to randomly spawn on the map : 
+1. Open the file ___type.xml___.
+2. Find the item you want to prevent from the spawning on the map.
+3. Change the ___lifetime___ value to the time in ___seconds___ you want it to despawn.
+4. Restart the server.
+
+> This will not affect any items already spawned on the map.
 
 ## Events configurations
 
