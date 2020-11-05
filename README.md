@@ -323,7 +323,10 @@ Here is a list of all NPC items you can use :
 - SurvivorM_Rolf 
 - SurvivorM_Seth 
 - SurvivorM_Taiki
-> thanks to Bhaalshad for the [tips](./WorkingNPC-By-Bhaalshad.txt) on how to spawn those NPC
+
+Use [How do i spawn something on the map](#How-do-i-spawn-something-on-the-map) instructions with those items name.
+
+> Thanks to Bhaalshad for the [tips](./WorkingNPC-By-Bhaalshad.txt) on how to spawn those NPC
 
 ## Loadout customizations
 
