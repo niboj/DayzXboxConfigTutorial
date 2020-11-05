@@ -1,6 +1,6 @@
-# Dayz Xbox Configuration Tutorial
+# Dayz Console Configuration Tutorial
 
-This is a tutorial to customize a Dayz Server for Xbox. 
+This is a tutorial to customize a Dayz Server for Console. 
 
 I collected this knowledge by being an admin for 6 months and I wanted to make this knowledge public to others, so they can easily know how to customize their servers.
 
