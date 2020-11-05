@@ -158,11 +158,19 @@ An item is define like this, for example the ___canteen___ item :
 - The ___usage___ tag is used to tell in which type of area this item can spawn. 
 > In this case ___Military, Hunting, Town and Village___.
 
-### How to cahnge how many items spawns
+### How to change how many items spawns
 Change the ___nominal___ value.
 
 ### How to make items spawn full
 Items containing ammo, pills and liquids, etc. will spawn full if you set ___quantmin___ to ___100___ and ___quantmax___ to ___100___
+
+### How to prevent an item from spawning
+If you don't want a particular item to randomly spawn on the map : 
+1- Open the file ___type.xml___.
+2- Find the item you want to prevent from the spawning on the map.
+3- Change the ___nominal___ value and ___min___ value of that item to ___0___
+
+> This will not despawn any items of this type currently spawned on the map.
 
 ## Events configurations
 
@@ -331,6 +339,11 @@ Use [How do i spawn something on the map](#How-do-i-spawn-something-on-the-map) 
 
 ## Loadout customizations
 
+In Dayz you can cutomize loadout of zombies, npcs, vehicules and container items (bags, seachest, giftbox, etc)
+
+> Warning : if you change the loadout of an item, all items of this type will spawn with that loadout, custom spawns et randow spawns.
+
+> Tips : if you use container items to spawn items on the map, disable the random spawns of this type of item (see [#prevent-an-item-from-spawning]
 
 
 ## Territory flags configurations
@@ -605,4 +618,4 @@ Here is a list of cool references that showed me how to customize a dayz server.
 - [DonSibleyGames discord server](https://discord.gg/qFabj6aCRk) : has a community of modders and lots of examples.
 - [Bohemia Interactive Category:DayZ:Editing](https://community.bistudio.com/wiki/Category:DayZ:Editing) : provide some informations and examples.
 - [The Dead Return - How-To Customize A DayZ SA Server](https://helpthedeadreturn.wordpress.com/2019/07/17/how-to-customize-your-dayz-sa-vanilla-server/) : basic stuff
-- You can also find lots of post in Reddit.
+- You can also find lots of posts in Reddit.
