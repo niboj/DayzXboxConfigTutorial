@@ -54,7 +54,7 @@ The dayz map is divided in 4 tiers. Tiers are used to define area where certain 
 
 ## Global configurations
 
-### How to change the despawn timers of things in the world
+### How to change the despawn timers of things in the world ?
 Ruined items, dead players, animals and dead zombies despawn timer can be changed. 
 1. Open the file ___Globals.xml___.
 2. Find the appropriate tag you want to change :
@@ -70,7 +70,7 @@ Ruined items, dead players, animals and dead zombies despawn timer can be change
 > Values are in seconds. Here ___3600___ means it is a ___60 seconds per minute X 60 minutes___ = ___1 hour___
 4. Save the file and restart the server.
 
-### How to change the maximum number of items found on the map
+### How to change the maximum number of items found on the map ?
 Dayz limits the number of items you can find on the map to ___1200___. You can change this value, but be warn it can affect the server performance.
 1. Open the file ___Globals.xml___.
 2. Find the ___SpawnInitial___ tag :
@@ -80,7 +80,7 @@ Dayz limits the number of items you can find on the map to ___1200___. You can c
 3. Change the ___value___ attribute of the number of items you want to spawn on the map.
 4. Save the file and restart the server.
 
-### How to change the maximum number of zombies on the map
+### How to change the maximum number of zombies on the map ?
 
 Dayz limits the number of zombies players can encounters on the map to ___800___. You can change this value, but be warn it can affect the server performance.
 1. Open the file ___Globals.xml___.
@@ -91,7 +91,7 @@ Dayz limits the number of zombies players can encounters on the map to ___800___
 3. Change the ___value___ attribute of the number of zombies you want on the map.
 4. Save the file and restart the server.
 
-### How to change the maximum number of animals on the map
+### How to change the maximum number of animals on the map ?
 
 Dayz limits the number of animals players can encounters on the map to ___200___. You can change this value, but be warn it can affect the server performance.
 1. Open the file ___Globals.xml___.
@@ -158,13 +158,13 @@ An item is define like this, for example the ___canteen___ item :
 - The ___usage___ tag is used to tell in which type of area this item can spawn. 
 > In this case ___Military, Hunting, Town and Village___.
 
-### How to change how many items spawns
+### How to change how many items spawns ?
 Change the ___nominal___ value.
 
-### How to make items spawn full
+### How to make items spawn full ?
 Items containing ammo, pills and liquids, etc. will spawn full if you set ___quantmin___ to ___100___ and ___quantmax___ to ___100___
 
-### How to prevent an item from spawning
+### How to prevent an item from spawning ?
 If you don't want a particular item to randomly spawn on the map : 
 1. Open the file ___type.xml___.
 2. Find the item you want to prevent from the spawning on the map.
@@ -173,7 +173,7 @@ If you don't want a particular item to randomly spawn on the map :
 
 > This will not despawn any items of this type already spawned on the map.
 
-### How to change the time an item takes to spawning
+### How to change the time an item takes to spawning ?
 If you don't want a particular item to randomly spawn on the map : 
 1. Open the file ___type.xml___.
 2. Find the item you want to prevent from the spawning on the map.
@@ -248,7 +248,7 @@ An event also have some coodinates that tells the game were to spawn this event.
 - The ___z___ is the Z coordinate. 
 - The ___a___ is the angle (0-360) of the item. The value ___0___ means facing north. Setting the value to ___-1___ will randomize the angle of the item.
 
-### How do i spawn something on the map
+### How do i spawn something on the map ?
 In Dayz you can spawn items, buildings, NPCs and animals. Developpers also added hidden items you can add to the game.
 
 Here is a list of items you can spawn in version 1.09 : [class-dump-1.09-class-names-by-Bhaalshad.txt](./class-dump-1.09-class-names-by-Bhaalshad.txt)
@@ -307,7 +307,7 @@ Here is a list of items you can spawn in version 1.09 : [class-dump-1.09-class-n
 ``` 
 8. Save the files and restart your server.
 
-### How do I spawn non player caracters (NPCs)
+### How do I spawn non player caracters (NPCs) ?
 There is hidden NPC caracter you can spawn in the game. Those NPC don't do anything, but it can be funny or usefull to spawn them on the map. You can use them to deliver items, or as alarm for bases to know who raided you (with a killfeed). 
 
 Here is a list of all NPC items you can use : 
@@ -357,7 +357,7 @@ Loadouts of items are configuration in the file ___cfgspawnabletypes.xml___.
 
 > If an item entry is missing from this file, you can add a new entry with the item name of this item. For example if you want refridgerators to spawn food and drinks just add : 
 
-### Loadout of container items
+### How to change the loadout of container items ?
 Container items like 
 
 ```xml
@@ -396,7 +396,7 @@ Container items like
 
 > Tips : if you use container items to spawn items on the map, disable the random spawns of this type of item (see [How to prevent an item from spawning](#How-to-prevent-an-item-from-spawning).
 
-### Items attachments 
+### How to change the items attachments ?
 Some items like guns, helmets, zombies, NPCs and cars have attachments. You can set which attachments spawns with those types of items in the file ___cfgspawnabletypes.xml___ like this : 
 
 ```xml
@@ -443,7 +443,7 @@ Some items like zombies and NPCS can combine ___cargo___ and ___attachments___ :
 ## Territory flags configurations
 Territory flags (flag poles) in Dayz have the hability to refresh to despawn timers on item around them. You can change the behaviors of territory flags with the following configurations.
 
-### Change the refresh frequency of territory flags
+### How to change the refresh frequency of territory flags ?
 Territory flag normally take 5 days to get down when it is fully raised. In order to change this behavior :
 1. Open the file ___Globals.xml___.
 2. Find the ___FlagRefreshFrequency___ tag :
@@ -454,7 +454,7 @@ Territory flag normally take 5 days to get down when it is fully raised. In orde
 > Values are in seconds. Here ___432000___ means ___60 seconds x 60 minutes x 24 hours =  5 days___
 4. Save the file and restart the server.
 
-### Change the refresh maximum duration of territory flags
+### How to change the refresh maximum duration of territory flags ?
 Territory flag normally when they are not fully down, refreshes the despawn timer of all items (items on the floor, fences, containers items, etc.) 60 meters around them. In order to change this behavior :
 1. Open the file ___Globals.xml___.
 2. Find the ___FlagRefreshMaxDuration___ tag :
@@ -475,7 +475,7 @@ Dayz for xbox has only 4 car types :
 - VehicleSedan02
 Others like the VS3 truck and the bus are non functionnal.
 
-### How to spawn more cars
+### How to spawn more cars ?
 In order to spawn more cars :
 1. Open the file ___event.xml___.
 2. Find the event of the car you want to spawn more.
@@ -529,7 +529,7 @@ In order to spawn more cars :
 ```
 4. Save the file and restart the server.
 
-### How to despawn all cars and make then respawn brand new
+### How to despawn all cars and make then respawn brand new ?
 In order to make all car, working and broken ones, despawn and respawn brand new :
 
 1. Open the file ___event.xml___.
@@ -587,7 +587,7 @@ In order to make all car, working and broken ones, despawn and respawn brand new
 6. Save the file and restart your server. 
 > All cars should know respawn as brand new one.
 
-### How to make cars non persistant
+### How to make cars non persistant ?
 In order to make car non persistant, by that I mean despawn and respawn after every server restart : 
 
 1. Despawn all cars.
@@ -602,7 +602,7 @@ In order to make car non persistant, by that I mean despawn and respawn after ev
 ```
 6. Save the file and restart your server.
 
-### How to spawn fully built cars
+### How to spawn fully built cars ?
 Cars in dayz spawn with random ___attachments___, in order to make then always fully built :
 
 1. Open the file ___cfgspawnabletypes.xml___.
@@ -659,7 +659,7 @@ Cars in dayz spawn with random ___attachments___, in order to make then always f
 ```
 4. Save the file and restart your server.
 
-### How to add items in cars
+### How to add items in cars ?
 Cars can spawn with cargo in them, for example you may want to provide canteen of water and fuel to your players so they can fill their brand new car.
 1. Open the file ___cfgspawnabletypes.xml___.
 2. Find the entry for the car type you want to add items, for example : 
@@ -698,7 +698,7 @@ Cars can spawn with cargo in them, for example you may want to provide canteen o
 ```
 4. Save the file and restart your server.
 
-### How to make cars fly
+### How to make cars fly ?
 Yes Dayz can have flying cars !!!
 
 1. Make your server 70 slots.
