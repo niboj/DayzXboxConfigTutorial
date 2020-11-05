@@ -11,7 +11,7 @@ If this tutorial is helpul to you and you want to contribute to my efforts in do
 [Paypal Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=3EX6J5S29U5P4&currency_code=CAD)
 
 ## Table of content
-- [Editing tools](#editing-tools)
+- [Editing the files](#Editing-the-files)
 - [Concepts](#concepts)
 - [General configurations](#global-configurations)
 - [Messages configurations](#Messages-configurations)
@@ -22,8 +22,12 @@ If this tutorial is helpul to you and you want to contribute to my efforts in do
 - [Car related configurations](#car-related-configurations)
 
 
+## Editing the files
+I strongly suggest you use an external editor to modify the configuration files. You could edit the files directly on the server, but by doing that you have higher chances to mess up the files.
 
-## Editing tools
+> A tiny caracter at the wrong place, can messed up the game by preventing zombies from spawning or preventing loot from spawning or prevent cars from spawning or make your player spawn at the default spawns,  etc.
+
+### Editing tools
 In order to efficiently edit the dayz config, you need a few tools : 
 - A PC (or a mac) : in order to install the other tools.
 - [Notepad++](https://notepad-plus-plus.org/downloads/) editor to edit the configuration files
@@ -34,7 +38,7 @@ You could edit the files directly on the server, but by doing that you have chan
 > A tiny caracter at the wrong place, can messed up the game by preventing zombies from spawning or preventing loot from spawning or prevent cars from spawning or make your player spawn at the default spawns,  etc.
 
 ### Back ups
-Before editing you files, you should always make a copy of the originals in case you overrite a important configuration or if you messup a configuration file.
+Before editing you files, you should always make a copy of the originals in case you overrite a important configuration or in case you messup a configuration file and you need to rool back your customizations.
 
 ## Concepts
 
