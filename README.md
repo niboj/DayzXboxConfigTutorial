@@ -54,8 +54,8 @@ The dayz map is divided in 4 tiers. Tiers are used to define area where certain 
 
 ## Global configurations
 
-### Change the despawn timers of things in the world
-ruined items, dead players, animals and dead zombies despawn timer can be changed. 
+### How to change the despawn timers of things in the world
+Ruined items, dead players, animals and dead zombies despawn timer can be changed. 
 1. Open the file ___Globals.xml___.
 2. Find the appropriate tag you want to change :
 ```xml
@@ -70,7 +70,7 @@ ruined items, dead players, animals and dead zombies despawn timer can be change
 > Values are in seconds. Here ___3600___ means it is a ___60 seconds per minute X 60 minutes___ = ___1 hour___
 4. Save the file and restart the server.
 
-### Change the maximum number of items found on the map
+### How to change the maximum number of items found on the map
 Dayz limits the number of items you can find on the map to ___1200___. You can change this value, but be warn it can affect the server performance.
 1. Open the file ___Globals.xml___.
 2. Find the ___SpawnInitial___ tag :
@@ -80,7 +80,7 @@ Dayz limits the number of items you can find on the map to ___1200___. You can c
 3. Change the ___value___ attribute of the number of items you want to spawn on the map.
 4. Save the file and restart the server.
 
-### Change the maximum number of zombies on the map
+### How to change the maximum number of zombies on the map
 
 Dayz limits the number of zombies players can encounters on the map to ___800___. You can change this value, but be warn it can affect the server performance.
 1. Open the file ___Globals.xml___.
@@ -91,7 +91,7 @@ Dayz limits the number of zombies players can encounters on the map to ___800___
 3. Change the ___value___ attribute of the number of zombies you want on the map.
 4. Save the file and restart the server.
 
-### Change the maximum number of animals on the map
+### How to change the maximum number of animals on the map
 
 Dayz limits the number of animals players can encounters on the map to ___200___. You can change this value, but be warn it can affect the server performance.
 1. Open the file ___Globals.xml___.
