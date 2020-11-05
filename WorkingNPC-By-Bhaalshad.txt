@@ -1,0 +1,177 @@
+<!--
+****** install notes ******
+First make sure you back up your files before adding any new code!
+
+Remember to remove any old code before placing mine in 
+(for objects already in list, some are new and some of mine are newly added.)
+To find out if item/object is already in file, do a search on the name...
+Ie... name="objectnamehere" search the name within the quotes.
+
+So you know where to place the code(s) I have added a comment just above each coded area
+with the name of the file it needs to go in.
+
+For objects needing X and Z cords... You may want to use your own and or add additional 
+cordinates for your object. The ones I use might not be where you want yours at, so just 
+remove mine and place yours in. If you do not know where or how to get cordinates I would
+suggestusing the iZurvive Dayz Map Tool. It can be found here... https://www.izurvive.com/
+
+Filesnames must remain intact. Do not rename a file unless you are making a backup.
+The game only reconizes org file names.
+
+Next to the  file name will be a comment,
+New Entry or Replace Entry.
+For New Entry - Place anywhere in the file (I prefer near the top).
+For Replace Entry - Remove old code then place mine in.
+-->
+
+<!-- cfgeventspawns.xml New Entry -->
+<event name="ItemGuard1">
+	<pos x="3808.40" z="10317.24" a="315.0" />
+</event>
+
+<!-- events.xml New Entry -->
+<event name="ItemGuard1">
+	<nominal>1</nominal>
+	<min>1</min>
+	<max>1</max>
+	<lifetime>2500</lifetime>
+	<restock>0</restock>
+	<saferadius>0</saferadius>
+	<distanceradius>0</distanceradius>
+	<cleanupradius>200</cleanupradius>
+	<flags deletable="0" init_random="0" remove_damaged="1"/>
+	<position>fixed</position>
+	<limit>child</limit>
+	<active>1</active>
+	<children>
+		<!-- use any Survivor name you wish from the list below -->
+		<child lootmax="0" lootmin="0" max="1" min="1" type="SurvivorF_Keiko"/>
+	</children>
+</event>
+<!-- List of all Survivor names
+
+SurvivorF_Eva 
+SurvivorF_Frida 
+SurvivorF_Gabi 
+SurvivorF_Helga 
+SurvivorF_Irena 
+SurvivorF_Judy 
+SurvivorF_Keiko 
+SurvivorF_Linda 
+SurvivorF_Maria 
+SurvivorF_Naomi 
+SurvivorM_Boris 
+SurvivorM_Cyril 
+SurvivorM_Denis 
+SurvivorM_Elias 
+SurvivorM_Francis 
+SurvivorM_Guo 
+SurvivorM_Hassan 
+SurvivorM_Indar 
+SurvivorM_Jose 
+SurvivorM_Kaito 
+SurvivorM_Lewis 
+SurvivorM_Manua 
+SurvivorM_Mirek 
+SurvivorM_Niki 
+SurvivorM_Oliver 
+SurvivorM_Peter 
+SurvivorM_Quinn 
+SurvivorM_Rolf 
+SurvivorM_Seth 
+SurvivorM_Taiki
+
+-->
+
+
+<!-- cfgspawnabletypes.xml New Entry -->
+<type name="SurvivorF_Keiko">
+	<attachments>
+		<item name="MilitaryBeret_CDF" />
+	</attachments>
+	<attachments>
+		<item name="NVGHeadstrap" />
+	</attachments>	
+	<attachments>
+		<item name="BDUJacket" />
+	</attachments>
+	<attachments>
+		<item name="BDUPants" />
+	</attachments>	
+	<attachments>
+		<item name="MilitaryBoots_Black" />
+	</attachments>	
+	<attachments>
+		<item name="HighCapacityVest_Black" />
+	</attachments>
+	<attachments>
+		<item name="NylonKnifeSheath" />
+	</attachments>
+	<attachments>
+		<item name="CombatKnife" />
+	</attachments>		
+	<attachments>
+		<item name="AliceBag_Black" />
+	</attachments>
+	<attachments>
+		<item name="TacticalGloves_Beige" />
+	</attachments>	
+	<attachments>
+		<item name="MilitaryBelt" />
+	</attachments>	
+	<attachments>
+		<item name="M4A1_Green" />
+	</attachments>
+	<attachments>
+		<item name="M4_CQBBttstck" />
+	</attachments>
+	<attachments>
+		<item name="M4_RISHndgrd_Green" />
+	</attachments>
+	<attachments>
+		<item name="M4_Suppressor" />
+	</attachments>
+	<attachments>
+		<item name="ACOGOptic" />
+	</attachments>	
+	<attachments>
+		<item name="Sword" />
+	</attachments>
+	<attachments>
+		<item name="Mag_STANAGCoupled_30Rnd" />
+	</attachments>
+	<attachments>
+		<item name="FNX45" />
+	</attachments>
+	<attachments>
+		<item name="Mag_FNX45_15Rnd" />
+	</attachments>	
+	<attachments>
+		<item name="RDG2SmokeGrenade_Black" />
+	</attachments>
+	<attachments>
+		<item name="RDG2SmokeGrenade_Black" />
+	</attachments>
+	<attachments>
+		<item name="RGD5Grenade" />
+	</attachments>
+	<attachments>
+		<item name="RGD5Grenade" />
+	</attachments>	
+	<attachments>
+		<item name="BloodTestKit" />
+	</attachments>
+	<attachments>
+		<item name="Bandage" />
+	</attachments>
+	<attachments>
+		<item name="Rice" />
+	</attachments>	
+	<attachments>
+		<item name="SodaCan_Cola" />
+	</attachments>				
+</type>
+
+Org File Created by Bhaalshad. For more help files for DayZ come visit us at DonSibley.Games
+If you upload this to another Discord or webpage, please leave filename intact and dont take credit
+as your own. Thank you and enjoy :)
