@@ -440,6 +440,90 @@ ___cfgeventspawns.xml___
         	<pos x="6888.41" z="11458.24" a="75" /> 
     	</event>
 ```
+### Example : spawning stones
+___event.xml___
+```xml
+	<event name="ItemStone">
+		<nominal>8</nominal>
+		<min>8</min>
+		<max>32</max>
+		<lifetime>14400</lifetime>
+		<restock>200</restock>
+		<saferadius>1</saferadius>
+		<distanceradius>1</distanceradius>
+		<cleanupradius>100</cleanupradius>
+		<flags deletable="0" init_random="0" remove_damaged="0"/>
+		<position>fixed</position>
+		<limit>child</limit>
+		<active>0</active>
+		<children>
+		    <child lootmax="0" lootmin="0" max="1" min="1" type="Stone"/>
+		</children>
+	</event>
+```
+___cfgeventspawns.xml___
+```xml
+	<event name="ItemStone">
+        	<pos x="6888.41" z="11458.24" a="75" /> 
+    	</event>
+```
+
+### Example : spawning wooden planks
+___event.xml___
+```xml
+	<event name="ItemPlanks">
+		<nominal>1</nominal>
+		<min>1</min>
+		<max>1</max>
+		<lifetime>14400</lifetime>
+		<restock>200</restock>
+		<saferadius>1</saferadius>
+		<distanceradius>1</distanceradius>
+		<cleanupradius>100</cleanupradius>
+		<flags deletable="0" init_random="0" remove_damaged="0"/>
+		<position>fixed</position>
+		<limit>child</limit>
+		<active>0</active>
+		<children>
+		    <child lootmax="0" lootmin="0" max="10" min="10" type="WoodenPlank"/>
+		</children>
+    	</event>
+```
+___cfgeventspawns.xml___
+```xml
+	<event name="ItemPlanks">
+        	<pos x="6888.41" z="11458.24" a="75" /> 
+    	</event>
+```
+
+### Example : spawning planks pile
+___event.xml___
+```xml
+	<event name="ItemPlanksPile">
+		<nominal>1</nominal>
+		<min>1</min>
+		<max>1</max>
+		<lifetime>14400</lifetime>
+		<restock>600</restock>
+		<saferadius>1</saferadius>
+		<distanceradius>1</distanceradius>
+		<cleanupradius>100</cleanupradius>
+		<flags deletable="0" init_random="0" remove_damaged="0"/>
+		<position>fixed</position>
+		<limit>child</limit>
+		<active>0</active>
+		<children>
+		    <child lootmax="0" lootmin="0" max="255" min="60" type="PileOfWoodenPlanks"/>
+		</children>
+    	</event>
+```
+___cfgeventspawns.xml___
+```xml
+	<event name="ItemPlanksPile">
+        	<pos x="6888.41" z="11458.24" a="75" /> 
+    	</event>
+```
+
 
 ## Loadout and attachments customizations
 
