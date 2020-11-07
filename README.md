@@ -39,7 +39,7 @@ You could edit the files directly on the server, but by doing that you have chan
 > A tiny caracter at the wrong place, can messed up the game by preventing zombies from spawning or preventing loot from spawning or prevent cars from spawning or make your player spawn at the default spawns,  etc.
 
 ### Back ups
-Before editing you files, you should always make a copy of the originals in case you overrite a important configuration or in case you messup a configuration file and you need to rool back your customizations.
+Before editing your files, you should always make a copy of the originals in case you overrite a important configuration or in case you messup a configuration file and you need to rool back your customizations.
 
 ## Global configurations
 
