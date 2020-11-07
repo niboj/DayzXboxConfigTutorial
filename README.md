@@ -41,17 +41,6 @@ You could edit the files directly on the server, but by doing that you have chan
 ### Back ups
 Before editing you files, you should always make a copy of the originals in case you overrite a important configuration or in case you messup a configuration file and you need to rool back your customizations.
 
-## Concepts
-
-### Tiers
-The dayz map is divided in 4 tiers. Tiers are used to define area where certain items can spawn. It's not clear which tier are what part of the map...
-- Tier 1 (probably light green).
-- Tier 2 (probably dark green).
-- Tier 3 (probably blue).
-- Tier 4  (probably red).
-
-![Tiers](./tiers.jpg)
-
 ## Global configurations
 
 ### How to change the despawn timers of things in the world ?
@@ -157,6 +146,44 @@ An item is define like this, for example the ___canteen___ item :
 > In this case ___food___.
 - The ___usage___ tag is used to tell in which type of area this item can spawn. 
 > In this case ___Military, Hunting, Town and Village___.
+
+### Tiers
+The dayz map is divided in 4 tiers. Tiers are used to define area where certain items can spawn. It's not clear which tier are what part of the map...
+
+Here is a list of all possible ___value___ parameter values 
+- Tier1 (probably light green).
+- Tier2 (probably dark green).
+- Tier3 (probably blue).
+- Tier4  (probably red).
+
+![Tiers](./tiers.jpg)
+
+### Usage 
+Here is a list of all possible ___usage___ parameter values 
+
+- Coast
+- Farm
+- Firefighter
+- Hunting
+- Industrial
+- Medic
+- Military
+- Office
+- Police
+- Prison
+- School
+- Town
+- Village
+
+### Category
+Here is a list of all possible ___category___ parameter values 
+- clothes
+- containers
+- explosives
+- food
+- tools
+- weapons
+- vehiclesparts
 
 ### How to change how many items spawns ?
 Change the ___nominal___ value.
@@ -711,5 +738,6 @@ Yes Dayz can have flying cars !!!
 Here is a list of cool references that showed me how to customize a dayz server.
 - [DonSibleyGames discord server](https://discord.gg/qFabj6aCRk) : has a community of modders and lots of examples.
 - [Bohemia Interactive Category:DayZ:Editing](https://community.bistudio.com/wiki/Category:DayZ:Editing) : provide some informations and examples.
+- [trugaming.com - DayZ: Other Game Info](https://trugaming.com/wiki/index.php/DayZ:_Other_Game_Info)
 - [The Dead Return - How-To Customize A DayZ SA Server](https://helpthedeadreturn.wordpress.com/2019/07/17/how-to-customize-your-dayz-sa-vanilla-server/) : basic stuff
 - You can also find lots of posts in Reddit.
