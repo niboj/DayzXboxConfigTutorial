@@ -385,6 +385,62 @@ Use [How do i spawn something on the map](#How-do-i-spawn-something-on-the-map) 
 
 > Thanks to Bhaalshad for the [tips](./WorkingNPC-By-Bhaalshad.txt) on how to spawn those NPC
 
+### Example : spawning logs 
+___event.xml___
+```xml
+	<event name="ItemWoodenLog">
+		<nominal>8</nominal>
+		<min>8</min>
+		<max>24</max>
+		<lifetime>14400</lifetime>
+		<restock>200</restock>
+		<saferadius>1</saferadius>
+		<distanceradius>1</distanceradius>
+		<cleanupradius>100</cleanupradius>
+		<flags deletable="0" init_random="0" remove_damaged="0"/>
+		<position>fixed</position>
+		<limit>mixed</limit>
+		<active>0</active>
+		<children>
+		    <child lootmax="0" lootmin="0" max="1" min="1" type="WoodenLog"/>
+		</children>
+    	</event>
+```
+___cfgeventspawns.xml___
+```xml
+	<event name="ItemWoodenLog">
+        	<pos x="6878.41" z="11458.24" a="75" /> 
+    	</event>
+```
+
+### Example : spawning metal sheet
+___event.xml___
+```xml
+	<event name="ItemMetal">
+		<nominal>1</nominal>
+		<min>1</min>
+		<max>1</max>
+		<lifetime>14400</lifetime>
+		<restock>200</restock>
+		<saferadius>1</saferadius>
+		<distanceradius>1</distanceradius>
+		<cleanupradius>100</cleanupradius>
+		<flags deletable="0" init_random="0" remove_damaged="0"/>
+		<position>fixed</position>
+		<limit>child</limit>
+		<active>0</active>
+		<children>
+		    <child lootmax="0" lootmin="0" max="8" min="8" type="MetalPlate"/>
+		</children>
+    	</event>
+```
+___cfgeventspawns.xml___
+```xml
+	<event name="ItemMetal">
+        	<pos x="6888.41" z="11458.24" a="75" /> 
+    	</event>
+```
+
 ## Loadout and attachments customizations
 
 In Dayz you can cutomize loadout of zombies, npcs, vehicules and container items (bags, seachest, giftbox, etc)
