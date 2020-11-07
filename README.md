@@ -185,6 +185,12 @@ Here is a list of all possible ___category___ parameter values
 - weapons
 - vehiclesparts
 
+### Tag
+Tags are use to specify where to which specific location in a building an item should spawn.
+Here is a list of all possible ___tag___ parameter values 
+- shelves
+- floor
+
 ### How to change how many items spawns ?
 Change the ___nominal___ value.
 
