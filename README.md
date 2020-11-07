@@ -146,11 +146,12 @@ An item is define like this, for example the ___canteen___ item :
 > In this case ___food___.
 - The ___usage___ tag is used to tell in which type of area this item can spawn. 
 > In this case ___Military, Hunting, Town and Village___.
+- The ___value___ tag is used to tell in which tier of map this item can spawn. 
 
 ### Tiers
 The dayz map is divided in 4 tiers. Tiers are used to define area where certain items can spawn. It's not clear which tier are what part of the map...
 
-Here is a list of all possible ___value___ parameter values 
+Here is a list of all possible values for the ___value___ parameter
 - Tier1 (probably light green).
 - Tier2 (probably dark green).
 - Tier3 (probably blue).
@@ -159,7 +160,9 @@ Here is a list of all possible ___value___ parameter values
 ![Tiers](./tiers.jpg)
 
 ### Usage 
-Here is a list of all possible ___usage___ parameter values 
+The ___usage___ tag is used to tell in which type of area this item can spawn.
+
+Here is a list of all possible values for the ___usage___ parameter:
 
 - Coast
 - Farm
@@ -176,7 +179,9 @@ Here is a list of all possible ___usage___ parameter values
 - Village
 
 ### Category
-Here is a list of all possible ___category___ parameter values 
+The ___category___ tag is used to categorize items and is used in the ___mapgrouppos.xml___ file to spawn certain types of items in buildings.
+
+Here is a list of all possible ___category___ parameter values :
 - clothes
 - containers
 - explosives
@@ -187,7 +192,7 @@ Here is a list of all possible ___category___ parameter values
 
 ### Tag
 Tags are use to specify where to which specific location in a building an item should spawn.
-Here is a list of all possible ___tag___ parameter values 
+Here is a list of all possible ___tag___ parameter values : 
 - shelves
 - floor
 
