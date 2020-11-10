@@ -228,7 +228,7 @@ Events are used to control how things spawns in the world. Those things can be :
 - Items
 - Vehicules
 
-Events are defined in the file ___event.xml___. An event definition looks like this
+Events are defined in the file ___events.xml___. An event definition looks like this
 
 ```xml
 	<event name="ItemSantasHat">
@@ -313,7 +313,7 @@ Here is a list of items you can spawn in version 1.09 : [class-dump-1.09-class-n
 ```
 3. Copy the name attribute of the item you want to spawn. In this case ___SantasHat___.
 > Now you need to define the ___event___ that will be used to spawn the ___item___.
-4. Open the ___event.xml___ file. 
+4. Open the ___events.xml___ file. 
 5. Add an event entry like this by adding the name on the item you want to spawn in the ___type___ attribute of the ___child___ tag : 
 >Be sure to give a unique ___name___ to your event 
 ```xml
@@ -386,7 +386,7 @@ Use [How do i spawn something on the map](#How-do-i-spawn-something-on-the-map) 
 > Thanks to Bhaalshad for the [tips](./WorkingNPC-By-Bhaalshad.txt) on how to spawn those NPC
 
 ### Example : spawning logs 
-___event.xml___
+___events.xml___
 ```xml
 	<event name="ItemWoodenLog">
 		<nominal>8</nominal>
@@ -414,7 +414,7 @@ ___cfgeventspawns.xml___
 ```
 
 ### Example : spawning metal sheet
-___event.xml___
+___events.xml___
 ```xml
 	<event name="ItemMetal">
 		<nominal>1</nominal>
@@ -441,7 +441,7 @@ ___cfgeventspawns.xml___
     	</event>
 ```
 ### Example : spawning stones
-___event.xml___
+___events.xml___
 ```xml
 	<event name="ItemStone">
 		<nominal>8</nominal>
@@ -469,7 +469,7 @@ ___cfgeventspawns.xml___
 ```
 
 ### Example : spawning wooden planks
-___event.xml___
+___events.xml___
 ```xml
 	<event name="ItemPlanks">
 		<nominal>1</nominal>
@@ -497,7 +497,7 @@ ___cfgeventspawns.xml___
 ```
 
 ### Example : spawning planks pile
-___event.xml___
+___events.xml___
 ```xml
 	<event name="ItemPlanksPile">
 		<nominal>1</nominal>
@@ -655,7 +655,7 @@ Others like the VS3 truck and the bus are non functionnal.
 
 ### How to spawn more cars ?
 In order to spawn more cars :
-1. Open the file ___event.xml___.
+1. Open the file ___events.xml___.
 2. Find the event of the car you want to spawn more.
 > Vehicule events name always begins with ___Vehicule___
 ```xml
@@ -710,7 +710,7 @@ In order to spawn more cars :
 ### How to despawn all cars and make then respawn brand new ?
 In order to make all car, working and broken ones, despawn and respawn brand new :
 
-1. Open the file ___event.xml___.
+1. Open the file ___events.xml___.
 2. For each car type you want to despawn find the corresponding event, for example : 
 ```xml
 <event name="VehicleOffroadHatchback">
@@ -740,7 +740,7 @@ In order to make all car, working and broken ones, despawn and respawn brand new
 ```
 4. Save the file and restart your server. 
 > This will make all car despawn.
-5. For each car event you changed in the ___event.xml___ file, change back the ___active___ tag to ___1___.
+5. For each car event you changed in the ___events.xml___ file, change back the ___active___ tag to ___1___.
 ```xml
 	<event name="VehicleOffroadHatchback">
 		<nominal>40</nominal>
