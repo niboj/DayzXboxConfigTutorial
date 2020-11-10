@@ -19,6 +19,7 @@ If this tutorial is helpul to you and feel free to contribute to my efforts of d
 - [Events configurations](#events-configurations)
 - [Loadout and attachments customizations](#loadout-and-attachments-customizations)
 - [Territory flags configurations](#territory-flags-configurations)
+- [Change players spawn location](#change-players-spawn-location)
 - [Car related configurations](#car-related-configurations)
 - [References](#References)
 
@@ -642,6 +643,17 @@ Territory flag normally when they are not fully down, refreshes the despawn time
 3. Change the ___value___ attribute to the value you want 
 > Values are in seconds. Here ___1296000___ means ___60 seconds x 60 minutes x 24 hours =  15 days___
 4. Save the file and restart the server.
+
+## Change players spawn location
+In dayz you can change the default player spawn location of new players by following these steps : 
+1. Open the file ___cfgplayerspawnpoints.xml___.
+2. Fing the tag ___generator_posbubbles___ tag inside the ___fresh___ tag.
+3. Add a location by adding a ___pos___ tag with the coordinates where you want the player to spawn inside the ___generator_posbubbles___ tag. For example :
+```xml
+	<pos x="3605.76" z="2406.70" />
+```
+4. Remove the unwanted locations by deleting the correspoding ___pos___ tags.
+5. Save the file and restart the server.
 
 ## Car related configurations
 
