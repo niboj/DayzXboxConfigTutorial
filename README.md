@@ -4,12 +4,6 @@ This is a tutorial to customize a Dayz Server for Console.
 
 I collected this knowledge by being an admin for 6 months and I wanted to make this knowledge public to others, so they can easily know how to customize their servers.
 
-If this tutorial is helpul to you and feel free to contribute to my efforts of documenting how this game works by using the link below : 
-
-![Donate](https://github.com/niboj/DayzXboxConfigTutorial/blob/main/Code%20QR.png?raw=true)
-
-[Paypal Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=3EX6J5S29U5P4&currency_code=CAD)
-
 ## Table of content
 - [Editing the files](#Editing-the-files)
 - [Concepts](#concepts)
@@ -913,6 +907,12 @@ Yes Dayz can have flying cars !!!
 > Dayz servers become very laggy when there are more thant 60 players playing, this makes car undrivable and sometimes makes them go off in the air. 
 
 # References
+
+If this tutorial is helpul to you and feel free to contribute to my efforts of documenting how this game works by using the link below : 
+
+![Donate](https://github.com/niboj/DayzXboxConfigTutorial/blob/main/Code%20QR.png?raw=true)
+
+[Paypal Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=3EX6J5S29U5P4&currency_code=CAD)
 
 Here is a list of cool references that showed me how to customize a dayz server.
 - [DonSibleyGames discord server](https://discord.gg/qFabj6aCRk) : has a community of modders and lots of examples.
