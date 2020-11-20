@@ -258,7 +258,8 @@ Events are defined in the file ___events.xml___. An event definition looks like 
 	- ___Infected___ for zombies
 	- ___Trajectory___ for fruits and stones
 
-- The ___nominal___ value is the average number of active instances of this event on the server .
+- The ___nominal___ value is the average number of child items instances on the server.
+> It can be more than the max value if you have more than one child item in the event definition.
 - The ___min___ value is the minimum number of active instances of this event on the server.
 - The ___max___ value is the maximum number of active instances of this event on the server.
 - The ___lifetime___ value is the time in seconds that an event of this type will stay active on the server.
@@ -271,7 +272,12 @@ Events are defined in the file ___events.xml___. An event definition looks like 
 - The ___limit___ value (___custom, parent, child, mixed___) is how the maximum number of active event is counted. A ___custom___ limit refer to an external file like for animals territories.
 - The ___active___ value (___0 = false, 1 = true___) is an indicator to activate or deactivate these events.
 - The ___children___ tags are the items that will spawn with the events of this type.
-
+	- The ___lootmax___ attribute is the maximum number of item that will spawn around this child item.
+	- The ___lootmin___ attribute is the minimum number of item that will spawn around this child item.
+	> This means that you can make item spawn next to spawned children items (like in the helicrashes). The kind of items that will spawn for this particular item is configurable in the file___mapgroupproto.xml___. If not specified it will be random items.
+	> If you are spawning a container item (ex: a backpack) ___lootmin___ and ___lootmax___ will be used to set the minimum and maximum number of slots in that item that can contain the item. The payload of the container items can be set in the file ___cfgspawnabletypes.xml___ (see [Loadout and attachments customizations](#loadout-and-attachments-customizations)).
+	- The ___max___ attribute is the maximum number of items of this kind that will spawn in all instances of this event type.
+	- The ___min___ attribute is the maximum number of items of this kind that will spawn in all instances of this event type.
 An event also have some coodinates that tells the game were to spawn this event. Event's coodinates entries are defined in the file ___cfgeventspawns.xml___ and looks like this.
 
 ```xml
