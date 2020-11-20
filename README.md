@@ -221,6 +221,13 @@ If you don't want a particular item to randomly spawn on the map :
 
 > This will not affect any items already spawned on the map.
 
+### How to spawn a particular item type in a specific area type 
+You can specify where items can spawn. In order to do that you have to add (or remove) a ___usage___ tag to the type of item you want.
+1. Open the file ___type.xml___.
+2. Find the item you want to spawn on the map.
+3. Change the ___usage___ value of the desired usage location (see [Usage](#Usage))
+4. Restart the server.
+
 ## Events configurations
 
 Events are used to control how things spawns in the world. Those things can be : 
@@ -274,8 +281,11 @@ Events are defined in the file ___events.xml___. An event definition looks like 
 - The ___children___ tags are the items that will spawn with the events of this type.
 	- The ___lootmax___ attribute is the maximum number of item that will spawn around this child item.
 	- The ___lootmin___ attribute is the minimum number of item that will spawn around this child item.
+	
 	> This means that you can make item spawn next to spawned children items (like in the helicrashes). The kind of items that will spawn for this particular item is configurable in the file___mapgroupproto.xml___. If not specified it will be random items.
-	> If you are spawning a container item (ex: a backpack) ___lootmin___ and ___lootmax___ will be used to set the minimum and maximum number of slots in that item that can contain the item. The payload of the container items can be set in the file ___cfgspawnabletypes.xml___ (see [Loadout and attachments customizations](#loadout-and-attachments-customizations)).
+	
+	> If you are spawning a container item (ex: a backpack) ___lootmin___ and ___lootmax___ will be used to set the minimum and maximum number of slots in that item that can contain other items. The payload of the container items can be set in the file ___cfgspawnabletypes.xml___ (see [Loadout and attachments customizations](#loadout-and-attachments-customizations)).
+	
 	- The ___max___ attribute is the maximum number of items of this kind that will spawn in all instances of this event type.
 	- The ___min___ attribute is the maximum number of items of this kind that will spawn in all instances of this event type.
 An event also have some coodinates that tells the game were to spawn this event. Event's coodinates entries are defined in the file ___cfgeventspawns.xml___ and looks like this.
