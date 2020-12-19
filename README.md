@@ -259,10 +259,10 @@ Events are defined in the file ___events.xml___. An event definition looks like 
 	- ___Infected___ for zombies
 	- ___Trajectory___ for fruits and stones
 
-- The ___nominal___ value is the average number of child items instances on the server.
+- The ___nominal___ value is the number of instance created for this kind of event.
 > It can be more than the max value if you have more than one child item in the event definition.
-- The ___min___ value is the minimum number of active instances of this event on the server.
-- The ___max___ value is the maximum number of active instances of this event on the server.
+- The ___min___ value is the minimum number of children items this event will spawn for each instance.
+- The ___max___ value is the maximum number of children items this event will spawn for each instance.
 - The ___lifetime___ value is the time in seconds that an event of this type will stay active on the server.
 - The ___restock___ value is the time in seconds between each event invocations once the ___min___ number of active instances have been reached.
 - The ___saferadius___ is the distance away from the player position that this event can spawn.
@@ -270,7 +270,11 @@ Events are defined in the file ___events.xml___. An event definition looks like 
 - The ___cleanupradius___ is the distance away from the player position that the event will despawn after lifetime ticks down.
 - The ___secondary___ tag is the name of an other event you want to spawn at the same time than this event, for example to spawn zombies around a building or an item.
 - The ___position___ value (___player or fixed___) determines whether distance is counted from the player position or from a fixed position.
-- The ___limit___ value (___custom, parent, child, mixed___) is how the maximum number of active event is counted. A ___custom___ limit refer to an external file like for animals territories.
+- The ___limit___ value (___custom, parent, child, mixed___) is how the maximum number of children item is counted. 
+	- ___custom___ limit refer to an external file like for animals territories.
+	- ___child___ limit refer to the ___min___ and ___max___ attributes of the each ___child___.
+	- ___parent___ limit refer to the ___min___ and ___max___ attributes of the event itself.
+	- ___mixed___ limit is a mix of both ___child___ et ___parent___.
 - The ___active___ value (___0 = false, 1 = true___) is an indicator to activate or deactivate these events.
 - The ___children___ tags are the items that will spawn with the events of this type.
 	- The ___lootmax___ attribute is the maximum number of item that will spawn around this child item.
