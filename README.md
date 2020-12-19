@@ -924,3 +924,7 @@ Here is a list of cool references that showed me how to customize a dayz server.
 - [trugaming.com - DayZ: Other Game Info](https://trugaming.com/wiki/index.php/DayZ:_Other_Game_Info)
 - [The Dead Return - How-To Customize A DayZ SA Server](https://helpthedeadreturn.wordpress.com/2019/07/17/how-to-customize-your-dayz-sa-vanilla-server/) : basic stuff
 - You can also find lots of posts in Reddit.
+
+If you wanna come play with me, you can join the server I code for : https://discord.gg/ew8GUwYMpr
+
+See Ya !
