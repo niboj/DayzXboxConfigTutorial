@@ -923,6 +923,7 @@ Here is a list of cool references that showed me how to customize a dayz server.
 - [Bohemia Interactive Category:DayZ:Editing](https://community.bistudio.com/wiki/Category:DayZ:Editing) : provide some informations and examples.
 - [trugaming.com - DayZ: Other Game Info](https://trugaming.com/wiki/index.php/DayZ:_Other_Game_Info)
 - [The Dead Return - How-To Customize A DayZ SA Server](https://helpthedeadreturn.wordpress.com/2019/07/17/how-to-customize-your-dayz-sa-vanilla-server/) : basic stuff
+- [Bohemia interactive Dayz config File Github Repositpry](https://github.com/BohemiaInteractive/DayZ-Central-Economy)
 - You can also find lots of posts in Reddit.
 
 If you wanna come play with me, you can join the server I code for : https://discord.gg/ew8GUwYMpr
