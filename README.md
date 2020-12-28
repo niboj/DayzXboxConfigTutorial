@@ -144,15 +144,15 @@ An item is define like this, for example the ___canteen___ item :
 - The ___value___ tag is used to tell in which tier of map this item can spawn. 
 
 ### Tiers
-The dayz map is divided in 4 tiers. Tiers are used to define area where certain items can spawn. It's not clear which tier are what part of the map...
+The dayz map is divided in 4 tiers. Tiers are used to define area where certain items can spawn. 
 
 Here is a list of all possible values for the ___value___ parameter
-- Tier1 (probably light green).
-- Tier2 (probably dark green).
-- Tier3 (probably blue).
-- Tier4  (probably red).
+- Tier1 (green).
+- Tier2 (yellow).
+- Tier3 (orange).
+- Tier4 (red).
 
-![Tiers](./tiers.jpg)
+![Tiers](./dayz-chernarusplus-tiers-map.png)
 
 ### Usage 
 The ___usage___ tag is used to tell in which type of area this item can spawn.
