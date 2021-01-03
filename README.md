@@ -10,8 +10,8 @@ I collected this knowledge by being an admin for 6 months and I wanted to make t
 - [General configurations](#global-configurations)
 - [Messages configurations](#Messages-configurations)
 - [Items configurations](#Items-configurations)
-- [Events configurations](#events-configurations)
 - [Loadout and attachments customizations](#loadout-and-attachments-customizations)
+- [Events configurations](#events-configurations)
 - [Territory flags configurations](#territory-flags-configurations)
 - [Change players spawn location](#change-players-spawn-location)
 - [Car related configurations](#car-related-configurations)
@@ -222,6 +222,99 @@ You can specify where items can spawn. In order to do that you have to add (or r
 3. Change the ___usage___ value of the desired usage location (see [Usage](#Usage))
 4. Restart the server.
 
+## Loadout and attachments customizations
+
+In Dayz you can cutomize loadout of zombies, npcs, vehicules and container items (bags, seachest, giftbox, etc)
+
+> Warning : if you change the loadout of an item, all items of this type will spawn with that loadout, custom spawns et randow spawns.
+
+Loadouts of items are configuration in the file ___cfgspawnabletypes.xml___. 
+
+> If an item entry is missing from this file, you can add a new entry with the item name of this item. For example if you want refridgerators to spawn food and drinks just add : 
+
+### How to change the loadout of container items ?
+Container items like 
+
+```xml
+	<type name="Refridgerator">
+		<cargo chance="0.50">
+			<item name="Vodka" chance="1.00" /> 
+		</cargo>
+		<cargo chance="1.00">
+			<item name="Vodka" chance="0.50" /> 
+			<item name="SodaCan_Pipsi" chance="0.50" /> 
+		</cargo>
+		<cargo preset="foodVillage" />
+		<cargo chance="1.00">
+			<item name="WaterBottle" chance="1.00" /> 
+		</cargo>
+		<cargo chance="1.00">
+			<item name="WaterBottle" chance="1.00" /> 
+		</cargo>
+	</type>
+```
+- The ___type___ tag is used to refer to the ___name___ of the item you want to set the loadout.
+ 
+- The ___cargo___ tag is used to set the items you want to load in the container item. You can set a ___chance___ attribute to this tag in order to specify the randomness of an item to get load in the container item.
+
+- The ___item___ tags are use to set the item you want to load. You can set a ___chance___ attribute to this tag in order to specify the randomness of an item to get load in the container item. Multiple items can be set inside a ___cargo___ tag, but only one of these item will get load.
+> In order to spawn multiple item of the same type, add multiple ___cargo___ tags with the same item inside them (see WaterBottle item the above example).
+
+- You can also use preset in order to spawn items inside container items. Presets are define in the file ___cfgrandompresets.xml___ 
+```xml
+	<cargo chance="1.0" name="foodVillage">
+		<item name="TunaCan" chance="0.50" />
+		<item name="WaterBottle" chance="0.25" />
+		<item name="Apple" chance="0.25" />
+	</cargo>
+```
+
+> Tips : if you use container items to spawn items on the map, disable the random spawns of this type of item (see [How to prevent an item from spawning](#How-to-prevent-an-item-from-spawning).
+
+### How to change the items attachments ?
+Some items like guns, helmets, zombies, NPCs and cars have attachments. You can set which attachments spawns with those types of items in the file ___cfgspawnabletypes.xml___ like this : 
+
+```xml
+	<type name="ZmbM_PrisonerSkinny">
+		<attachments  chance="1.00">
+			<item name="GreatHelm" chance="1.00" />
+		</attachments>
+		<attachments  chance="1.00">
+			<item name="Sword" chance="1.00" />
+		</attachments>
+		<attachments  chance="1.00">
+			<item name="PrisonUniformJacket" chance="1.00" />
+		</attachments>
+		<attachments  chance="1.00">
+			<item name="PrisonUniformPants" chance="1.00" />
+		</attachments>	
+	</type>
+```
+
+Or like this: 
+```xml 
+	<type name="Saiga">
+		<attachments chance="1.00">
+			<item name="Saiga_Bttstck" chance="1.00" />
+		</attachments>
+		<attachments chance="1.00">
+			<item name="Mag_Saiga_5Rnd" chance="0.50" />
+			<item name="Mag_Saiga_8Rnd" chance="0.30" />
+			<item name="Mag_Saiga_Drum20Rnd" chance="0.20" />
+		</attachments>
+	</type>
+```
+
+Some items like zombies and NPCS can combine ___cargo___ and ___attachments___ : 
+```xml
+	<type name="ZmbM_VillagerOld_Green">
+		<cargo preset="foodVillage" />
+		<cargo preset="toolsVillage" />
+		<attachments preset="glassesVillage" />
+		<attachments preset="hatsFarm" />
+		<attachments preset="bagsVillage" />
+	</type>
+```
 ## Events configurations
 
 Events are used to control how things spawns in the world. Those things can be : 
@@ -538,99 +631,105 @@ ___cfgeventspawns.xml___
         	<pos x="6888.41" z="11458.24" a="75" /> 
     	</event>
 ```
+### Example : Spawning a container item with loot inside
+This is more complex, you have to combine the config from the previous section with an event...
 
-
-## Loadout and attachments customizations
-
-In Dayz you can cutomize loadout of zombies, npcs, vehicules and container items (bags, seachest, giftbox, etc)
-
-> Warning : if you change the loadout of an item, all items of this type will spawn with that loadout, custom spawns et randow spawns.
-
-Loadouts of items are configuration in the file ___cfgspawnabletypes.xml___. 
-
-> If an item entry is missing from this file, you can add a new entry with the item name of this item. For example if you want refridgerators to spawn food and drinks just add : 
-
-### How to change the loadout of container items ?
-Container items like 
+___events.xml___
+* ___restock___ is set to ___1200___ in order to resupply the event with a new protector case every 10 minutes.
+* ___lootmin___ and ___lootmax___ are set to the maximum number of slot the container item can contain, in this case ___12___.
+* ___lifetime___ is set to ___14400___ because my server is set to restart every 4 hours. I don't want this event to last too long if I want to change it later.
 
 ```xml
-	<type name="Refridgerator">
-		<cargo chance="0.50">
-			<item name="Vodka" chance="1.00" /> 
+	<event name="ItemProtectorCaseForBuilders">
+		<nominal>1</nominal>
+		<min>1</min>
+		<max>1</max>
+		<lifetime>14400</lifetime>
+		<restock>1200</restock>
+		<saferadius>3</saferadius>
+		<distanceradius>3</distanceradius>
+		<cleanupradius>3</cleanupradius>
+		<flags deletable="0" init_random="0" remove_damaged="1"/>
+		<position>fixed</position>
+		<limit>mixed</limit>
+		<active>1</active>
+		<children>
+		    <child lootmax="12" lootmin="12" max="4" min="1" type="SmallProtectorCase"/>
+		</children>
+    	</event>
+```
+___cfgeventspawns.xml___
+
+```xml
+	<event name="ItemProtectorCaseForBuilders">
+        	<pos x="1760.00" z="9351.00"/>   
+    	</event>
+```
+___type.xml___
+* Here the ___nominal___ and ___min___ are set to ___0___ because you don't want every ___SmallProtectorCase___ to spawn everywhere with this loot inside them.
+* Also for this example i wanted to have stacks of 99 nails, so i changed ___quantmin___ and ___quantmax___ of the nails item type.
+
+```xml
+	<type name="SmallProtectorCase">
+		<nominal>0</nominal>
+		<lifetime>1200</lifetime>
+		<restock>0</restock>
+		<min>0</min>
+		<quantmin>-1</quantmin>
+		<quantmax>-1</quantmax>
+		<cost>50</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="0" count_in_player="0" crafted="0" deloot="0"/>
+		<category name="containers"/>
+		<usage name="Industrial"/>
+		<usage name="Town"/>
+    	</type>
+	<type name="Nail">
+		<nominal>0</nominal>
+		<lifetime>3600</lifetime>
+		<restock>0</restock>
+		<min>0</min>
+		<quantmin>99</quantmin>
+		<quantmax>99</quantmax>
+		<cost>90</cost>
+		<flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="1" deloot="0"/>
+		<category name="tools"/>
+    	</type>
+```
+___cfgspawnabletypes.xml___
+* Here I repeat the ___cargo___ tag for each item i want in the container even if it is the same item.
+
+```xml
+<type name="SmallProtectorCase">
+		<cargo chance="1.00">
+			<item name="Whetstone" chance="1.00" />			
 		</cargo>
 		<cargo chance="1.00">
-			<item name="Vodka" chance="0.50" /> 
-			<item name="SodaCan_Pipsi" chance="0.50" /> 
-		</cargo>
-		<cargo preset="foodVillage" />
-		<cargo chance="1.00">
-			<item name="WaterBottle" chance="1.00" /> 
+			<item name="Whetstone" chance="1.00" />			
 		</cargo>
 		<cargo chance="1.00">
-			<item name="WaterBottle" chance="1.00" /> 
+			<item name="Nail" chance="1.00" />			
 		</cargo>
-	</type>
-```
-- The ___type___ tag is used to refer to the ___name___ of the item you want to set the loadout.
- 
-- The ___cargo___ tag is used to set the items you want to load in the container item. You can set a ___chance___ attribute to this tag in order to specify the randomness of an item to get load in the container item.
-
-- The ___item___ tags are use to set the item you want to load. You can set a ___chance___ attribute to this tag in order to specify the randomness of an item to get load in the container item. Multiple items can be set inside a ___cargo___ tag, but only one of these item will get load.
-> In order to spawn multiple item of the same type, add multiple ___cargo___ tags with the same item inside them (see WaterBottle item the above example).
-
-- You can also use preset in order to spawn items inside container items. Presets are define in the file ___cfgrandompresets.xml___ 
-```xml
-	<cargo chance="1.0" name="foodVillage">
-		<item name="TunaCan" chance="0.50" />
-		<item name="WaterBottle" chance="0.25" />
-		<item name="Apple" chance="0.25" />
-	</cargo>
-```
-
-> Tips : if you use container items to spawn items on the map, disable the random spawns of this type of item (see [How to prevent an item from spawning](#How-to-prevent-an-item-from-spawning).
-
-### How to change the items attachments ?
-Some items like guns, helmets, zombies, NPCs and cars have attachments. You can set which attachments spawns with those types of items in the file ___cfgspawnabletypes.xml___ like this : 
-
-```xml
-	<type name="ZmbM_PrisonerSkinny">
-		<attachments  chance="1.00">
-			<item name="GreatHelm" chance="1.00" />
-		</attachments>
-		<attachments  chance="1.00">
-			<item name="Sword" chance="1.00" />
-		</attachments>
-		<attachments  chance="1.00">
-			<item name="PrisonUniformJacket" chance="1.00" />
-		</attachments>
-		<attachments  chance="1.00">
-			<item name="PrisonUniformPants" chance="1.00" />
-		</attachments>	
-	</type>
-```
-
-Or like this: 
-```xml 
-	<type name="Saiga">
-		<attachments chance="1.00">
-			<item name="Saiga_Bttstck" chance="1.00" />
-		</attachments>
-		<attachments chance="1.00">
-			<item name="Mag_Saiga_5Rnd" chance="0.50" />
-			<item name="Mag_Saiga_8Rnd" chance="0.30" />
-			<item name="Mag_Saiga_Drum20Rnd" chance="0.20" />
-		</attachments>
-	</type>
-```
-
-Some items like zombies and NPCS can combine ___cargo___ and ___attachments___ : 
-```xml
-	<type name="ZmbM_VillagerOld_Green">
-		<cargo preset="foodVillage" />
-		<cargo preset="toolsVillage" />
-		<attachments preset="glassesVillage" />
-		<attachments preset="hatsFarm" />
-		<attachments preset="bagsVillage" />
+		<cargo chance="1.00">
+			<item name="Nail" chance="1.00" />			
+		</cargo>
+		<cargo chance="1.00">
+			<item name="Nail" chance="1.00" />			
+		</cargo>
+		<cargo chance="1.00">
+			<item name="Nail" chance="1.00" />			
+		</cargo>
+		<cargo chance="1.00">
+			<item name="Nail" chance="1.00" />			
+		</cargo>
+		<cargo chance="1.00">
+			<item name="Nail" chance="1.00" />			
+		</cargo>
+		<cargo chance="1.00">
+			<item name="Nail" chance="1.00" />			
+		</cargo>
+		<cargo chance="1.00">
+			<item name="Nail" chance="1.00" />			
+		</cargo>
 	</type>
 ```
 ## Territory flags configurations
