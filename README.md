@@ -1011,7 +1011,7 @@ Yes Dayz can have flying cars !!!
 
 # References
 
-If this tutorial is helpul to you and feel free to contribute to my efforts of documenting how this game works by using the link below : 
+If this tutorial is helpul to you, feel free to contribute to my efforts of documenting how this game works by using the link below : 
 
 ![Donate](https://github.com/niboj/DayzXboxConfigTutorial/blob/main/Code%20QR.png?raw=true)
 
