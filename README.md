@@ -124,7 +124,7 @@ An item is define like this, for example the ___canteen___ item :
 > In this case ___60 seconds X 60 minutes = 1 hour___.
 - The ___min___ tag is the minimum number of this type of item you will find on the map. When the number of items of this kind in the world reaches this value, a new item of this type will be set to respawn after the number of second set in the ___restock___ value.
 > In this case ___15___.
-- Time before an item of this type respawns when the minimum number of items of this type reaches the ___min___ value. 
+- The ___restock___ tag is the time before an item of this type respawns when the minimum number of items of this type reaches the ___min___ value. 
 > In this case ___10___ minutes (600 seconds).
 - The ___quantmin___ and ___quantmax___ tags is for items that contains quantities of somethings (pills, liquid, ammo, etc.). It is the random ___minimal and maximal percentage (%)___ this item will be filled with.
 > In this case it will be filled between ___50% and 100%___.
