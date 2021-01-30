@@ -510,7 +510,7 @@ ___events.xml___
 		<flags deletable="0" init_random="0" remove_damaged="0"/>
 		<position>fixed</position>
 		<limit>mixed</limit>
-		<active>0</active>
+		<active>1</active>
 		<children>
 		    <child lootmax="0" lootmin="0" max="1" min="1" type="WoodenLog"/>
 		</children>
@@ -538,7 +538,7 @@ ___events.xml___
 		<flags deletable="0" init_random="0" remove_damaged="0"/>
 		<position>fixed</position>
 		<limit>child</limit>
-		<active>0</active>
+		<active>1</active>
 		<children>
 		    <child lootmax="0" lootmin="0" max="8" min="8" type="MetalPlate"/>
 		</children>
@@ -565,7 +565,7 @@ ___events.xml___
 		<flags deletable="0" init_random="0" remove_damaged="0"/>
 		<position>fixed</position>
 		<limit>child</limit>
-		<active>0</active>
+		<active>1</active>
 		<children>
 		    <child lootmax="0" lootmin="0" max="1" min="1" type="Stone"/>
 		</children>
@@ -593,7 +593,7 @@ ___events.xml___
 		<flags deletable="0" init_random="0" remove_damaged="0"/>
 		<position>fixed</position>
 		<limit>child</limit>
-		<active>0</active>
+		<active>1</active>
 		<children>
 		    <child lootmax="0" lootmin="0" max="10" min="10" type="WoodenPlank"/>
 		</children>
@@ -621,7 +621,7 @@ ___events.xml___
 		<flags deletable="0" init_random="0" remove_damaged="0"/>
 		<position>fixed</position>
 		<limit>child</limit>
-		<active>0</active>
+		<active>1</active>
 		<children>
 		    <child lootmax="0" lootmin="0" max="255" min="60" type="PileOfWoodenPlanks"/>
 		</children>
