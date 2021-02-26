@@ -1,4 +1,4 @@
-# Dayz Console Configuration Tutorial
+# Phantom Dayz Console Configuration Tutorial
 
 This is a tutorial to customize a Dayz Server for Console. 
 
