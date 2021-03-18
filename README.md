@@ -734,6 +734,310 @@ ___cfgspawnabletypes.xml___
 		</cargo>
 	</type>
 ```
+
+### Example : Niboj Racing night
+This example spawns lots of cars to make a racing event. It spawns car with racing gear for drivers. 
+
+Change the spawn locations of the players 
+___cfgplayerspawnpoints.xml___
+
+```xml
+	<generator_posbubbles>
+	     	<!-- Novaya -->
+		<pos x="3352.15" z="13058.36" />
+		<pos x="3456.15" z="13142.36" /> 
+		<pos x="3440.15" z="13037.36" /> 
+		<pos x="3420.15" z="12905.36" />
+	</generator_posbubbles>
+```
+
+Change the loadout of the cars you wanna race with
+___cfgspawnabletypes.xml___
+
+```xml
+<type name="Sedan_02">
+        <attachments chance="1.00">
+            <item name="Sedan_02_Wheel" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Sedan_02_Wheel" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Sedan_02_Wheel" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Sedan_02_Wheel" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="CarRadiator" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="CarBattery" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="SparkPlug" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="HeadlightH7" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="HeadlightH7" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Sedan_02_Door_1_1" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Sedan_02_Door_1_2" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Sedan_02_Door_2_1" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Sedan_02_Door_2_2" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Sedan_02_Hood" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Sedan_02_Trunk" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Canteen" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Canteen" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Canteen" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Canteen" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="CanisterGasoline" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="EpoxyPutty" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="EpoxyPutty" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="TacticalBaconCan" chance="1.00" />
+        </attachments>
+		<attachments chance="1.00">
+            <item name="HockeyHelmet_Blue" chance="1.00" />
+        </attachments>
+		<attachments chance="1.00">
+            <item name="JumpsuitJacket_Blue" chance="1.00" />
+        </attachments>
+		<attachments chance="1.00">
+            <item name="JumpsuitPants_Blue" chance="1.00" />
+        </attachments>
+    </type>
+    <type name="Sedan_02_Red">
+        <attachments chance="1.00">
+            <item name="Sedan_02_Wheel" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Sedan_02_Wheel" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Sedan_02_Wheel" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Sedan_02_Wheel" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="CarRadiator" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="CarBattery" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="SparkPlug" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="HeadlightH7" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="HeadlightH7" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Sedan_02_Door_1_1_Red" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Sedan_02_Door_1_2_Red" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Sedan_02_Door_2_1_Red" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Sedan_02_Door_2_2_Red" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Sedan_02_Hood_Red" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Sedan_02_Trunk_Red" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Canteen" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Canteen" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Canteen" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Canteen" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="CanisterGasoline" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="EpoxyPutty" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="EpoxyPutty" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="TacticalBaconCan" chance="1.00" />
+        </attachments>
+		<attachments chance="1.00">
+            <item name="HockeyHelmet_Red" chance="1.00" />
+        </attachments>
+		<attachments chance="1.00">
+            <item name="JumpsuitJacket_Red" chance="1.00" />
+        </attachments>
+		<attachments chance="1.00">
+            <item name="JumpsuitPants_Red" chance="1.00" />
+        </attachments>
+    </type>
+    <type name="Sedan_02_Grey">
+        <attachments chance="1.00">
+            <item name="Sedan_02_Wheel" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Sedan_02_Wheel" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Sedan_02_Wheel" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Sedan_02_Wheel" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="CarRadiator" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="CarBattery" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="SparkPlug" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="HeadlightH7" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="HeadlightH7" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="sedan_02_Door_1_1_Grey" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Sedan_02_Door_1_2_Grey" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Sedan_02_Door_2_1_Grey" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Sedan_02_Door_2_2_Grey" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Sedan_02_Hood_Grey" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Sedan_02_Trunk_Grey" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Canteen" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Canteen" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Canteen" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="Canteen" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="CanisterGasoline" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="EpoxyPutty" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="EpoxyPutty" chance="1.00" />
+        </attachments>
+        <attachments chance="1.00">
+            <item name="TacticalBaconCan" chance="1.00" />
+        </attachments>
+		<attachments chance="1.00">
+            <item name="HockeyHelmet_Black" chance="1.00" />
+        </attachments>
+		<attachments chance="1.00">
+            <item name="JumpsuitJacket_Gray" chance="1.00" />
+        </attachments>
+		<attachments chance="1.00">
+            <item name="JumpsuitPants_Grey" chance="1.00" />
+        </attachments>
+    </type>
+```
+
+Create an event that spawns the race cars (in this case 6 race cars)
+___events.xml___
+
+```xml
+	<event name="VehicleSedan02Racing">
+		<nominal>6</nominal>
+		<min>6</min>
+		<max>6</max>
+		<lifetime>1200</lifetime>
+		<restock>0</restock>
+		<saferadius>3</saferadius>
+		<distanceradius>3</distanceradius>
+		<cleanupradius>3</cleanupradius>
+		<flags deletable="0" init_random="0" remove_damaged="1"/>
+		<position>fixed</position>
+		<limit>mixed</limit>
+		<active>1</active>
+		<children>
+		    <child lootmax="0" lootmin="0" max="2" min="2" type="Sedan_02"/>
+		    <child lootmax="0" lootmin="0" max="2" min="2" type="Sedan_02_Grey"/>
+		    <child lootmax="0" lootmin="0" max="2" min="2" type="Sedan_02_Red"/>
+		</children>
+    	</event>
+```
+
+
+Set the locations where you want those cars to spawn 
+___cfgeventspawns.xml___
+
+```xml
+	<!-- Niboj Race night event-->
+	<event name="VehicleSedan02Racing">
+		<pos x="3626.78" z="13072.50" a="35" /> 
+		<pos x="3639.78" z="13075.50" a="35" /> 
+		<pos x="3653.78" z="13078.50" a="35" /> 
+		<pos x="3665.78" z="13080.50" a="35" /> 
+		<pos x="3677.78" z="13084.50" a="35" /> 
+		<pos x="3689.78" z="13087.50" a="35" /> 
+    	</event>
+```
+
 ## Territory flags configurations
 Territory flags (flag poles) in Dayz have the hability to refresh to despawn timers on item around them. You can change the behaviors of territory flags with the following configurations.
 
