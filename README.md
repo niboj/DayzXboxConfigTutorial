@@ -739,6 +739,7 @@ ___cfgspawnabletypes.xml___
 This example spawns lots of cars to make a racing event. It spawns car with racing gear for drivers. 
 
 Change the spawn locations of the players 
+
 ___cfgplayerspawnpoints.xml___
 
 ```xml
@@ -752,6 +753,7 @@ ___cfgplayerspawnpoints.xml___
 ```
 
 Change the loadout of the cars you wanna race with
+
 ___cfgspawnabletypes.xml___
 
 ```xml
@@ -998,6 +1000,7 @@ ___cfgspawnabletypes.xml___
 ```
 
 Create an event that spawns the race cars (in this case 6 race cars)
+
 ___events.xml___
 
 ```xml
@@ -1024,6 +1027,7 @@ ___events.xml___
 
 
 Set the locations where you want those cars to spawn 
+
 ___cfgeventspawns.xml___
 
 ```xml
