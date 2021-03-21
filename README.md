@@ -317,6 +317,153 @@ Some items like zombies and NPCS can combine ___cargo___ and ___attachments___ :
 		<attachments preset="bagsVillage" />
 	</type>
 ```
+
+### Example : attach other items to items 
+Some small items have attachment like batteries, you can make them spawn with their attachment by adding the following (thanx TooThickBigRick for the snippet) : 
+```xml
+	<type name="Headtorch_Black">
+		<attachments>
+		    <item name="Battery9V" />
+		</attachments>
+	    </type>
+		<type name="NVGoggles">
+		<attachments>
+		    <item name="Battery9V" />
+		</attachments>
+	    </type>
+		<type name="NVGHeadstrap">
+		<attachments>
+		    <item name="NVGoggles" />
+		</attachments>
+			<attachments>
+		    <item name="Battery9V" />
+		</attachments>
+	    </type>
+		<type name="PlateCarrierVest">
+		<attachments>
+		    <item name="PlateCarrierPouches" />
+		</attachments>
+			<attachments>
+		    <item name="PlateCarrierHolster" />
+		</attachments>
+	    </type>
+		<type name="CivilianBelt">
+		<attachments>
+		    <item name="NylonKnifeSheath" />
+		</attachments>
+			<attachments>
+		    <item name="Canteen" />
+		</attachments>
+	    </type>
+		<type name="MilitaryBelt">
+		<attachments>
+		    <item name="NylonKnifeSheath" />
+		</attachments>
+			<attachments>
+		    <item name="Canteen" />
+		</attachments>
+	    </type>
+		<type name="SmershVest">
+		<attachments>
+		    <item name="SmershBag" />
+		</attachments>
+	    </type>
+		<type name="Mich2001Helmet">
+		<attachments>
+		    <item name="NVGoggles" />
+		</attachments>
+			<attachments>
+		    <item name="Battery9V" />
+		</attachments>
+	    </type>
+		<type name="Headtorch_Grey">
+		<attachments>
+		    <item name="Battery9V" />
+		</attachments>
+	    </type>
+		<type name="StunBaton">
+		<attachments>
+		    <item name="Battery9V" />
+		</attachments>
+	    </type>
+		<type name="Flashlight">
+		<attachments>
+		    <item name="Battery9V" />
+		</attachments>
+	    </type>
+		<type name="CattleProd">
+		<attachments>
+		    <item name="Battery9V" />
+		</attachments>
+	    </type>
+		<type name="Megaphone">
+		<attachments>
+		    <item name="Battery9V" />
+		</attachments>
+	    </type>
+		<type name="Rangefinder">
+		<attachments>
+		    <item name="Battery9V" />
+		</attachments>
+	    </type>
+		<type name="TLRLight">
+		<attachments>
+		    <item name="Battery9V" />
+		</attachments>
+	    </type>
+		<type name="UniversalLight">
+		<attachments>
+		    <item name="Battery9V" />
+		</attachments>
+	    </type>
+		<type name="PSO11Optic">
+		<attachments>
+		    <item name="Battery9V" />
+		</attachments>
+	    </type>
+		<type name="PSO1Optic">
+		<attachments>
+		    <item name="Battery9V" />
+		</attachments>
+	    </type>
+		<type name="ReflexOptic">
+		<attachments>
+		    <item name="Battery9V" />
+		</attachments>
+	    </type>
+		<type name="FNP45_MRDSOptic">
+		<attachments>
+		    <item name="Battery9V" />
+		</attachments>
+	    </type>
+		<type name="KazuarOptic">
+		<attachments>
+		    <item name="Battery9V" />
+		</attachments>
+	    </type>
+		<type name="KobraOptic">
+		<attachments>
+		    <item name="Battery9V" />
+		</attachments>
+	    </type>
+		<type name="M4_T3NRDSOptic">
+		<attachments>
+		    <item name="Battery9V" />
+		</attachments>
+	    </type>
+		<type name="M68Optic">
+		<attachments>
+		    <item name="Battery9V" />
+		</attachments>
+	    </type>
+		<type name="PowerGenerator">
+		<attachments>
+		    <item name="SparkPlug" />
+		</attachments>
+	    </type>
+```
+
+
 ## Events configurations
 
 Events are used to control how things spawns in the world. Those things can be : 
