@@ -15,6 +15,7 @@ I collected this knowledge by being an admin for 9 months and I wanted to make t
 - [Territory flags configurations](#territory-flags-configurations)
 - [Change players spawn location](#change-players-spawn-location)
 - [Car related configurations](#car-related-configurations)
+- [Other useful stuff](#other-useful-stuff)
 - [References](#References)
 
 
@@ -1465,6 +1466,12 @@ Yes Dayz can have flying cars !!!
 2. Become very popular so that your server has more than 60 players.
 3. Drive a car. 
 > Dayz servers become very laggy when there are more thant 60 players playing, this makes car undrivable and sometimes makes them go off in the air. 
+
+# Other useful stuff
+
+## mapgrouppos.xml and mapgroupproto.xml
+Mapgrouppos isn't the file that tells the server where to spawn buildings. It's used to tell the server where to spawn loot. It has the centre point of each building and is used along with the mapgroupproto file to mark all the loot spawn points in buildings.
+
 
 # References
 
